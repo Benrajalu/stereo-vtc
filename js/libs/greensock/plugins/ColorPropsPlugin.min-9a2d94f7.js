@@ -1,0 +1,12 @@
+/*!
+ * VERSION: beta 1.2.1
+ * DATE: 2013-07-17
+ * UPDATES AND DOCS AT: http://www.greensock.com
+ *
+ * @license Copyright (c) 2008-2014, GreenSock. All rights reserved.
+ * This work is subject to the terms at http://www.greensock.com/terms_of_use.html or for
+ * Club GreenSock members, the software agreement that was issued with your membership.
+ * 
+ * @author: Jack Doyle, jack@greensock.com
+ **/
+var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof global?global:this||window;(_gsScope._gsQueue||(_gsScope._gsQueue=[])).push(function(){"use strict";var t=/(\d|\.)+/g,e={aqua:[0,255,255],lime:[0,255,0],silver:[192,192,192],black:[0,0,0],maroon:[128,0,0],teal:[0,128,128],blue:[0,0,255],navy:[0,0,128],white:[255,255,255],fuchsia:[255,0,255],olive:[128,128,0],yellow:[255,255,0],orange:[255,165,0],gray:[128,128,128],purple:[128,0,128],green:[0,128,0],red:[255,0,0],pink:[255,192,203],cyan:[0,255,255],transparent:[255,255,255,0]},i=function(t,e,i){return t=0>t?t+1:t>1?t-1:t,0|255*(1>6*t?e+6*(i-e)*t:.5>t?i:2>3*t?e+6*(i-e)*(2/3-t):e)+.5},n=function(n){if(""===n||null==n||"none"===n)return e.transparent;if(e[n])return e[n];if("number"==typeof n)return[n>>16,255&n>>8,255&n];if("#"===n.charAt(0))return 4===n.length&&(n="#"+n.charAt(1)+n.charAt(1)+n.charAt(2)+n.charAt(2)+n.charAt(3)+n.charAt(3)),n=parseInt(n.substr(1),16),[n>>16,255&n>>8,255&n];if("hsl"===n.substr(0,3)){n=n.match(t);var r=Number(n[0])%360/360,s=Number(n[1])/100,o=Number(n[2])/100,a=.5>=o?o*(s+1):o+s-o*s,l=2*o-a;return n.length>3&&(n[3]=Number(n[3])),n[0]=i(r+1/3,l,a),n[1]=i(r,l,a),n[2]=i(r-1/3,l,a),n}return n.match(t)||e.transparent};_gsScope._gsDefine.plugin({propName:"colorProps",version:"1.2.1",priority:-1,API:2,init:function(t,e){this._target=t;var i,r,s,o;for(i in e)s=n(e[i]),this._firstPT=o={_next:this._firstPT,p:i,f:"function"==typeof t[i],n:i,r:!1},r=n(o.f?t[i.indexOf("set")||"function"!=typeof t["get"+i.substr(3)]?i:"get"+i.substr(3)]():t[i]),o.s=Number(r[0]),o.c=Number(s[0])-o.s,o.gs=Number(r[1]),o.gc=Number(s[1])-o.gs,o.bs=Number(r[2]),o.bc=Number(s[2])-o.bs,(o.rgba=r.length>3||s.length>3)&&(o.as=4>r.length?1:Number(r[3]),o.ac=(4>s.length?1:Number(s[3]))-o.as),o._next&&(o._next._prev=o);return!0},set:function(t){for(var e,i=this._firstPT;i;)e=(i.rgba?"rgba(":"rgb(")+(i.s+t*i.c>>0)+", "+(i.gs+t*i.gc>>0)+", "+(i.bs+t*i.bc>>0)+(i.rgba?", "+(i.as+t*i.ac):"")+")",i.f?this._target[i.p](e):this._target[i.p]=e,i=i._next}})}),_gsScope._gsDefine&&_gsScope._gsQueue.pop()();
