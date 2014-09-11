@@ -1,0 +1,43 @@
+#topNav{
+	background:#000000;
+	height:81px;
+	line-height:81px;
+	#logo{
+		.inline-block();
+		vertical-align: middle;
+		width:259px;
+		height:81px;
+		background:url('../img/logocp.jpg') center center no-repeat;
+		overflow:hidden;
+		text-indent:-9999px;
+	}
+
+	#menuContents{
+		float:right;
+		display:block;
+		height:81px;
+		line-height:81px;
+		li{
+			.inline-block();
+			padding:0px 20px;
+			border-right:1px solid @white;
+			height:14px;
+			vertical-align: middle;
+			line-height:1;
+			&:last-child{
+				padding-right:0px;
+				border-right:0px;
+			}
+			a{
+				.helvetica(@white, 14px);
+				text-decoration:none;
+				border-bottom:1px solid #565656;
+				.transition(all, 300ms, ease-in);
+				&:hover{
+					color:@grey;
+					border-bottom:2px solid @red;
+				}
+			}
+		}
+	}
+}

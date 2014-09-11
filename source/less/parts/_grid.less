@@ -1,0 +1,178 @@
+// Grid work
+@tablet : 780px;
+@mobile : 550px;
+@rowWidth: 960px;
+
+	.row{
+		width:100%;
+		max-width:@rowWidth;
+		position:relative;
+		.clearfix();
+		margin:0 auto;
+	}
+
+	.rowFluid{
+		width:100%;
+		.clearfix();
+		position:relative;
+
+		&.textureBG{
+			background:url("../img/bg.jpg") center center;
+			@media
+			only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (   min--moz-device-pixel-ratio: 2),
+			only screen and (     -o-min-device-pixel-ratio: 2/1),
+			only screen and (        min-device-pixel-ratio: 2),
+			only screen and (                min-resolution: 192dpi),
+			only screen and (                min-resolution: 2dppx) { 
+				background:url('../img/bgX2.jpg') ncenter center;
+				background-size: 258px 150px;
+			}
+		}
+
+		&.greyBG{
+			background:@grey;
+		}
+
+		&.blueBG{
+			background: #818ba2; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgxOGJhMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3MjdhOGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top, #818ba2 0%, #727a8f 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#818ba2), color-stop(100%,#727a8f)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, #818ba2 0%,#727a8f 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, #818ba2 0%,#727a8f 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, #818ba2 0%,#727a8f 100%); /* IE10+ */
+			background: linear-gradient(to bottom, #818ba2 0%,#727a8f 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#818ba2', endColorstr='#727a8f',GradientType=0 ); /* IE6-8 */
+		}
+	}
+
+	.columns{
+		float:left;
+		display:block;
+		padding:0 20px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+
+		.generateSmall(12);
+
+		.generateMedium(12);
+
+		.generateLarge(12);
+
+		.largePull(12);
+
+		.largePush(12);
+
+		.mediumPull(12);
+
+		.mediumPush(12);
+
+		.smallPull(12);
+
+		.smallPush(12);
+
+		&.centered{
+			float:none !important;
+			margin:0 auto;
+			position:relative;
+		}
+
+		@media all and (max-width: @tablet){
+			&[class^=large-]{
+				width:100%;
+			}
+
+			&[class^=large-pull], &[class^=large-push]{
+				position:static;
+				left:0px;
+			}
+
+			.generateSmall(12);
+
+			.generateMedium(12);
+
+		}
+		@media all and (max-width: @mobile){
+			&[class^=large-]{
+				width:100%;
+			}
+
+			&[class^=medium-]{
+				width:100%;
+			}
+
+			&[class^=medium-pull], &[class^=medium-push]{
+				position:static;
+				left:0px;
+			}
+
+			.generateSmall(12);
+		}
+
+		// Column generators
+
+			.generateSmall(@n, @i:1) when (@i =< @n){
+				&.small-@{i} {
+					width: (100%/12) * @i;
+				}
+				.generateSmall(@n, (@i + 1));
+			}
+			.generateMedium(@n, @i:1) when (@i =< @n){
+				&.medium-@{i} {
+					width: (100%/12) * @i;
+				}
+				.generateMedium(@n, (@i + 1));
+			}
+			.generateLarge(@n, @i:1) when (@i =< @n){
+				&.large-@{i} {
+					width: (100%/12) * @i;
+				}
+				.generateLarge(@n, (@i + 1));
+			}
+			.largePull(@n, @i:1) when (@i =< @n){
+				&.large-pull-@{i} {
+					position:relative;
+					left: -(100%/12) * @i;
+				}
+				.largePull(@n, (@i + 1));
+			}
+			.largePush(@n, @i:1) when (@i =< @n){
+				&.large-pull-@{i} {
+					position:relative;
+					left: (100%/12) * @i;
+				}
+				.largePush(@n, (@i + 1));
+			}
+			.mediumPull(@n, @i:1) when (@i =< @n){
+				&.medium-pull-@{i} {
+					position:relative;
+					left: -(100%/12) * @i;
+				}
+				.mediumPull(@n, (@i + 1));
+			}
+			.mediumPush(@n, @i:1) when (@i =< @n){
+				&.medium-pull-@{i} {
+					position:relative;
+					left: (100%/12) * @i;
+				}
+				.mediumPush(@n, (@i + 1));
+			}
+			.smallPull(@n, @i:1) when (@i =< @n){
+				&.small-pull-@{i} {
+					position:relative;
+					left: -(100%/12) * @i;
+				}
+				.smallPull(@n, (@i + 1));
+			}
+			.smallPush(@n, @i:1) when (@i =< @n){
+				&.small-pull-@{i} {
+					position:relative;
+					left: (100%/12) * @i;
+				}
+				.smallPush(@n, (@i + 1));
+			}
+	}
