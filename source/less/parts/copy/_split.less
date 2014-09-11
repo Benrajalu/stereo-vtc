@@ -1,0 +1,54 @@
+.splitScreen{
+	.title.ml{
+		.helveticaBold(#23262b, 33px);
+		line-height:1.2;
+		letter-spacing:-1px;
+	}
+	a{
+		.helvetica(@blueText, 16px);
+		text-decoration:none;
+		border-bottom:1px solid @blueText;
+		position:relative;
+		margin-left:13px;
+		.transition(all 300ms ease-out);
+		&::before{
+			content:"› ";
+			position:absolute;
+			left:-10px;
+			top:0px;
+		}
+		&:hover{
+			color:#3b4154;
+			border-color:#3b4154;
+		}
+		&.button{
+			.inline-block();
+			margin-top:25px;
+			text-align:center;
+			padding:20px 40px;
+			color:@white;
+			text-transform: uppercase;
+			border:0px;
+			background:#737c90;
+			.border-radius(5px);
+			&:hover{
+				background:#3b4154;
+				color:@white;
+			}
+			&::before{
+				display:none;
+			}
+		}
+	}
+	&::before{
+		content:'';
+		width:5px;
+		height:100%;
+		position:absolute;
+		top:0px;
+		left:50%;
+		margin-left:-2.5px;
+		background:url('../img/dottedLine.png') center center;
+		display:block;
+	}
+}

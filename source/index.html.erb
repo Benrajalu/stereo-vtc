@@ -161,6 +161,13 @@ title: Chauffeur-privé - B2B home
 						<h2 class="title">Les chauffeurs les plus professionels et sympas</h2>
 						<p>Rejoignez une entreprise en pleine croissance, <strong>dynamique, conviviale et bosseuse !</strong></p>
 						<p>&nbsp;</p>
+						<div id="bubbles">
+							<%= image_tag "slides/bubbles/bubble1.jpg", :alt=>"Bubble", :class=>"bubble" %>
+							<%= image_tag "slides/bubbles/bubble2.jpg", :alt=>"Bubble", :class=>"bubble smaller" %>
+							<!-- Video centered in there -->
+							<%= image_tag "slides/bubbles/bubble2.jpg", :alt=>"Bubble", :class=>"bubble smaller right" %>
+							<%= image_tag "slides/bubbles/bubble1.jpg", :alt=>"Bubble", :class=>"bubble" %>
+						</div>
 						<div class="row">
 							<div class="medium-5 columns">
 								<ul class="checklist">
@@ -182,6 +189,25 @@ title: Chauffeur-privé - B2B home
 
 
 			</ul>		
+		</div>
+	</div>
+</div>
+
+<div class="rowFluid splitScreen">
+	<div class="medium-6 columns">
+		<div class="row left">
+			<%= image_tag "carBusiness.png", :alt=>"Je possède une voiture adaptée" %>
+			<h2 class="title ml">Je dispose <br/>de mon propre véhicule</h2>
+			<%= link_to "Voir la liste des modèles acceptés", "select.html" %>
+			<%= link_to "Je m'inscrit avec mon véhicule", "form.html", :class=> "button" %>
+		</div>
+	</div>
+	<div class="medium-6 columns">
+		<div class="row right">
+			<%= image_tag "carNeeded.png", :alt=>"Je ne possède pas de voiture adaptée" %>
+			<h2 class="title ml">Je souhaite <br/>un véhicule Chauffeur-Privé</h2>
+			<%= link_to "En savoir plus sur notre offre clé en main", "select.html" %>
+			<%= link_to "Je m'inscrit sans véhicule", "form.html", :class=> "button" %>
 		</div>
 	</div>
 </div>

@@ -3,24 +3,36 @@
 		.slides{
 			height:566px;
 			>li{
+				// Specific slides
 				&.madeInFrance{
 					position:relative;
+					overflow: hidden;
 					&::before{
 						content:' ';
 						display:block;
 						position:absolute;
-						top:0px;
 						left:15px;
 						background:url("../img/slides/slide5-logo.png") center center no-repeat;
 						width:123px;
 						height:54px;
+						top:-100px;
+						opacity:0.1;
+						.transition(all 300ms ease-in-out);
+						.transition-delay(800ms);
+					}
+					&.flex-active-slide{
+						&::before{
+							top:0px;
+							opacity:1;
+						}
 					}
 				}
 				>.slideContent{
 					padding:75px 50px;
 				}
 			}
-
+			
+			// general styles
 			.title{
 				.helveticaBold(#000000, 34px);
 				line-height:1.2;
@@ -38,7 +50,7 @@
 					line-height:1.2;
 				}
 			}
-
+			// Box articles (with videos)
 			.box{
 				background:@white;
 				.border-radius(10px);
@@ -97,7 +109,7 @@
 					}
 				}
 			}
-
+			// Checklist
 			.checklist{
 				text-align:left;
 				list-style-position: inside;
@@ -105,8 +117,9 @@
 					.helveticaBold(@white, 14px);
 					list-style-type: none;
 				    padding-left:20px;
-				    line-height:1.9;
+				    line-height:1.2;
 				    margin:0px;
+				    margin-bottom:10px;
 				    position:relative;
 					&::before{
 						content:" ";
@@ -116,11 +129,36 @@
 						width: 25px;
 						height:25px;
 						background:url('../img/checkPuces.png') center center no-repeat;
-						top:-3px;
+						top:-8px;
 					}
 				}
 			}
-
+			// Bubbles
+			#bubbles{
+				background:url('../img/slides/press.png') center center repeat;
+				min-height:270px;
+				position:relative;
+				text-align:center;
+				line-height:270px;
+				.bubble{
+					border:10px solid #f3f3f1;
+					.border-radius(9999px);
+					.box-shadow(2px 2px 5px rgba(0,0,0,0.06));
+					width:auto;
+					.inline-block();
+					vertical-align: middle;
+					&.smaller{
+						position:relative;
+						top:30px;
+						margin-right:60px;
+						&.right{
+							margin-right:0px;
+							margin-left:60px;
+						}
+					}
+				}
+			}
+			// Grid behavior
 			.row{
 				padding-top:50px;
 				.columns{

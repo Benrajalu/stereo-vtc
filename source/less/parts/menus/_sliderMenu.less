@@ -164,4 +164,32 @@
 			}
 		}
 	}
+
+	@media only screen and (max-width: @tablet){
+		ul{
+			overflow-y: hidden;
+			overflow-x: scroll;
+			white-space: nowrap;
+			font-size: 0;
+			li{
+				float:none;
+				.inline-block();
+				min-width:200px;
+				margin:0px;
+				a{
+					&::before{
+						top:-3px;
+					}
+					&::after{
+						display:none;
+					}
+					&.flex-active{
+						&::before{
+							top:0px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
