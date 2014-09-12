@@ -25,7 +25,7 @@
 			.inline-block();
 			margin-top:25px;
 			text-align:center;
-			padding:20px 40px;
+			padding:30px 40px;
 			color:@white;
 			text-transform: uppercase;
 			border:0px;
@@ -40,6 +40,10 @@
 			}
 		}
 	}
+
+	img{
+		max-width:100%;
+	}
 	&::before{
 		content:'';
 		width:5px;
@@ -50,5 +54,42 @@
 		margin-left:-2.5px;
 		background:url('../img/dottedLine.png') center center;
 		display:block;
+	}
+
+	@media only screen and (max-width: @tablet){
+		.title.ml{
+			font-size:22px;
+		}
+		a{
+			font-size:12px;
+		}
+		a.button{
+			font-size:12px;
+			padding:20px 15px;
+		}
+	}
+	@media only screen and (max-width: @mobile){
+		.title.ml{
+			font-size:22px;
+		}
+		a{
+			font-size:12px;
+		}
+		a.button{
+			display:block;
+			font-size:12px;
+			padding:20px 15px;
+			max-width:300px;
+			margin:20px auto;
+		}
+
+		&::before{
+			height:6px;
+			width:100%;
+			left:0px;
+			top:50%;
+			margin-top:-3px;
+			background-position:top left;
+		}
 	}
 }

@@ -104,6 +104,26 @@
   text-align: right;
   padding-right: 40px;
 }
+@media only screen and (max-width: 960px) {
+  .rowFluid.splitScreen .row.right {
+    padding-left: 20px;
+  }
+  .rowFluid.splitScreen .row.left {
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .rowFluid.splitScreen .columns {
+    padding: 15px;
+  }
+  .rowFluid.splitScreen .row.left,
+  .rowFluid.splitScreen .row.right {
+    max-width: 100%;
+    text-align: center;
+    float: none;
+    padding: 0 15px;
+  }
+}
 .columns {
   float: left;
   display: block;
@@ -513,7 +533,7 @@
   margin: 0 auto;
   position: relative;
 }
-@media all and (max-width: 1020px) {
+@media all and (max-width: 960px) {
   .columns[class^=large-] {
     width: 100%;
   }
@@ -595,7 +615,7 @@
     width: 100%;
   }
 }
-@media all and (max-width: 550px) {
+@media all and (max-width: 690px) {
   .columns[class^=large-] {
     width: 100%;
   }
@@ -938,6 +958,7 @@ html[xmlns] .flexslider .slides {
   display: inline-block;
   *display: inline;
   zoom: 1;
+  margin-left: 15px;
   vertical-align: middle;
   width: 259px;
   height: 81px;
@@ -958,7 +979,9 @@ html[xmlns] .flexslider .slides {
   display: none;
 }
 #topNav #menuContents {
-  float: right;
+  position: absolute;
+  top: 0px;
+  right: 15px;
   display: block;
   height: 81px;
   line-height: 81px;
@@ -993,7 +1016,7 @@ html[xmlns] .flexslider .slides {
   color: #f3f3f3;
   border-bottom: 2px solid #ae2d2b;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 690px) {
   #topNav {
     overflow: hidden;
   }
@@ -1003,7 +1026,7 @@ html[xmlns] .flexslider .slides {
     left: 20px;
   }
   #topNav #menuContents {
-    float: none;
+    right: auto;
     -webkit-transition: all 300ms ease-in;
     -moz-transition: all 300ms ease-in;
     -o-transition: all 300ms ease-in;
@@ -1321,6 +1344,9 @@ html[xmlns] .flexslider .slides {
     top: 0px;
   }
 }
+#mainSlider {
+  padding: 0px 50px;
+}
 #mainSlider .slides {
   height: 566px;
 }
@@ -1356,8 +1382,13 @@ html[xmlns] .flexslider .slides {
   top: 0px;
   opacity: 1;
 }
+@media only screen and (max-width: 960px) {
+  #mainSlider .slides > li.madeInFrance.flex-active-slide::before {
+    top: -5px;
+  }
+}
 #mainSlider .slides > li > .slideContent {
-  padding: 75px 50px;
+  padding: 75px 0px;
 }
 #mainSlider .slides .title {
   font-family: "helveticaBold", sans-serif;
@@ -1444,7 +1475,7 @@ html[xmlns] .flexslider .slides {
   background: url("../img/logoSmall.jpg") center center no-repeat;
 }
 #mainSlider .slides .box .list {
-  padding: 30px 25px;
+  padding: 30px 25px 0px 25px;
   list-style-position: inside;
 }
 #mainSlider .slides .box .list li {
@@ -1466,6 +1497,22 @@ html[xmlns] .flexslider .slides {
   content: "-";
   position: relative;
   left: -5px;
+}
+@media only screen and (max-width: 960px) {
+  #mainSlider .slides .box {
+    max-width: 400px;
+    margin: 30px auto 0px auto;
+  }
+  #mainSlider .slides .box h2 {
+    padding: 10px 0px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 690px) {
+  #mainSlider .slides .box {
+    max-width: 600px;
+    margin: 10px auto 0px auto;
+  }
 }
 #mainSlider .slides .checklist {
   text-align: left;
@@ -1502,6 +1549,15 @@ html[xmlns] .flexslider .slides {
 }
 #mainSlider .slides #bubbles .bubble {
   border: 10px solid #f3f3f1;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all all 300ms ease-in-out ease;
+  -moz-transition: all all 300ms ease-in-out ease;
+  -ms-transition: all all 300ms ease-in-out ease;
+  -o-transition: all all 300ms ease-in-out ease;
+  transition: all all 300ms ease-in-out ease;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -1530,6 +1586,100 @@ html[xmlns] .flexslider .slides {
   margin-right: 0px;
   margin-left: 60px;
 }
+#mainSlider .slides #bubbles .roundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -90px;
+  margin-top: -90px;
+  z-index: 10;
+}
+@media only screen and (max-width: 960px) {
+  #mainSlider .slides #bubbles {
+    height: 270px;
+  }
+  #mainSlider .slides #bubbles .bubble {
+    position: absolute;
+    display: block;
+  }
+  #mainSlider .slides #bubbles .bubble.smaller {
+    position: absolute;
+    top: auto;
+  }
+  #mainSlider .slides #bubbles .bubble.smaller.left,
+  #mainSlider .slides #bubbles .bubble.smaller.right {
+    top: auto;
+    margin-right: 0px;
+    position: absolute;
+  }
+  #mainSlider .slides #bubbles .bubble#face1 {
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+  }
+  #mainSlider .slides #bubbles .bubble#face2 {
+    bottom: 0px;
+    left: 195px;
+    z-index: 2;
+  }
+  #mainSlider .slides #bubbles .bubble#face3 {
+    bottom: 15px;
+    right: 195px;
+    z-index: 3;
+  }
+  #mainSlider .slides #bubbles .bubble#face4 {
+    top: 0px;
+    right: 0px;
+    z-index: 4;
+  }
+}
+@media only screen and (max-width: 690px) {
+  #mainSlider .slides #bubbles {
+    height: auto;
+    *zoom: 1;
+  }
+  #mainSlider .slides #bubbles:before,
+  #mainSlider .slides #bubbles:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  #mainSlider .slides #bubbles:after {
+    clear: both;
+  }
+  #mainSlider .slides #bubbles .bubble {
+    position: relative;
+  }
+  #mainSlider .slides #bubbles .bubble.smaller {
+    position: absolute;
+  }
+  #mainSlider .slides #bubbles .bubble.smaller.left,
+  #mainSlider .slides #bubbles .bubble.smaller.right {
+    top: auto;
+    position: absolute;
+  }
+  #mainSlider .slides #bubbles .bubble#face1 {
+    margin-bottom: 90px;
+  }
+  #mainSlider .slides #bubbles .bubble#face2 {
+    bottom: auto;
+    left: auto;
+    top: 50px;
+    right: 0px;
+    margin: 0px;
+  }
+  #mainSlider .slides #bubbles .bubble#face3 {
+    bottom: 110px;
+    left: 0px;
+    margin: 0px;
+    right: auto;
+  }
+  #mainSlider .slides #bubbles .bubble#face4 {
+    margin: 30px 0px;
+    float: right;
+  }
+}
 #mainSlider .slides .row {
   padding-top: 50px;
 }
@@ -1543,6 +1693,17 @@ html[xmlns] .flexslider .slides {
 }
 #mainSlider .slides .row .columns > p {
   width: 86%;
+}
+@media only screen and (max-width: 690px) {
+  #mainSlider .slides .row {
+    padding-top: 20px;
+  }
+  #mainSlider .slides .row .columns {
+    margin-bottom: 15px;
+  }
+  #mainSlider .slides .row .columns.noPad {
+    margin-bottom: 0px;
+  }
 }
 #mainSlider .flex-direction-nav .flex-prev,
 #mainSlider .flex-direction-nav .flex-next {
@@ -1562,19 +1723,78 @@ html[xmlns] .flexslider .slides {
   background-image: url("../img/prevNextHover.png");
 }
 #mainSlider .flex-direction-nav .flex-prev {
-  left: -27px;
+  left: 2px;
   background-position: 0px 0px;
 }
 #mainSlider .flex-direction-nav .flex-prev:hover {
-  left: -29px;
+  left: 3px;
 }
 #mainSlider .flex-direction-nav .flex-next {
-  right: -27px;
+  right: 2px;
   text-indent: 9999px;
   background-position: -24px 0px;
 }
 #mainSlider .flex-direction-nav .flex-next:hover {
-  right: -29px;
+  right: 3px;
+}
+@media only screen and (max-width: 960px) {
+  #mainSlider .slides {
+    height: auto;
+  }
+  #mainSlider .slides > li > .slideContent {
+    padding: 50px 0px;
+  }
+}
+.roundVideo {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  border: 10px solid #eaeae8;
+  background: #eaeae8;
+  overflow: hidden;
+  position: relative;
+  /* TODO TEST IE & FALLBACKS */
+}
+.roundVideo .rounded-vid {
+  -webkit-mask-image: url(http://www.stereosuper.fr/valid/chauffeurprive/mask.svg);
+  /* Chrome, Safari */
+  border-radius: 100%;
+  /* Firefox */
+}
+.roundVideo .embed-container {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+.roundVideo .embed-container iframe,
+.roundVideo .embed-container object,
+.roundVideo .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.box {
+  *zoom: 1;
+}
+.box:before,
+.box:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.box:after {
+  clear: both;
+}
+.box .roundVideo {
+  float: right;
+  display: table;
+  right: -10px;
+  bottom: -10px;
 }
 .hero {
   padding: 88px 15px;
@@ -1609,7 +1829,7 @@ html[xmlns] .flexslider .slides {
   width: 100%;
   max-width: 639px;
 }
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 960px) {
   .hero {
     padding: 60px 15px;
   }
@@ -1617,7 +1837,7 @@ html[xmlns] .flexslider .slides {
     font-size: 30px;
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 690px) {
   .hero {
     padding: 30px 15px;
   }
@@ -1668,7 +1888,7 @@ html[xmlns] .flexslider .slides {
   zoom: 1;
   margin-top: 25px;
   text-align: center;
-  padding: 20px 40px;
+  padding: 30px 40px;
   color: #ffffff;
   text-transform: uppercase;
   border: 0px;
@@ -1687,6 +1907,9 @@ html[xmlns] .flexslider .slides {
 .splitScreen a.button::before {
   display: none;
 }
+.splitScreen img {
+  max-width: 100%;
+}
 .splitScreen::before {
   content: '';
   width: 5px;
@@ -1697,4 +1920,39 @@ html[xmlns] .flexslider .slides {
   margin-left: -2.5px;
   background: url('../img/dottedLine.png') center center;
   display: block;
+}
+@media only screen and (max-width: 960px) {
+  .splitScreen .title.ml {
+    font-size: 22px;
+  }
+  .splitScreen a {
+    font-size: 12px;
+  }
+  .splitScreen a.button {
+    font-size: 12px;
+    padding: 20px 15px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .splitScreen .title.ml {
+    font-size: 22px;
+  }
+  .splitScreen a {
+    font-size: 12px;
+  }
+  .splitScreen a.button {
+    display: block;
+    font-size: 12px;
+    padding: 20px 15px;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  .splitScreen::before {
+    height: 6px;
+    width: 100%;
+    left: 0px;
+    top: 50%;
+    margin-top: -3px;
+    background-position: top left;
+  }
 }

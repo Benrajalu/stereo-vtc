@@ -24,7 +24,6 @@ title: Chauffeur-privé - B2B home
 		</ul>
 	</nav>
 </div>
-
 <div class="rowFluid blueBG">
 	<div class="row">
 		<div class="flexslider" id="mainSlider">
@@ -57,6 +56,11 @@ title: Chauffeur-privé - B2B home
 										<li><strong>Annulation</strong> payante</li>
 									</ul>
 									<!-- Video here -->
+									<div class="roundVideo">
+									    <div class='embed-container'>
+									        <iframe id="vid1" class="rounded-vid" src='http://www.youtube.com/embed/bpOSxM0rNPM?&enablejsapi=1&controls=0&showinfo=0&autoplay=1&loop=1&modestbranding=1&' frameborder='0' controls='0' allowfullscreen></iframe>
+									    </div>
+									</div>
 								</article>
 							</div>
 						</div>
@@ -87,7 +91,11 @@ title: Chauffeur-privé - B2B home
 									<ul class="list">
 										<li><strong>Des deals spéciaux</strong> avec nos partenaires (20% de réduction chez Speedy, restaurants, etc.)</li>
 									</ul>
-									<!-- Video here -->
+									<div class="roundVideo">
+									    <div class='embed-container'>
+									        <iframe id="vid2" class="rounded-vid" src='http://www.youtube.com/embed/bpOSxM0rNPM?&enablejsapi=1&controls=0&showinfo=0&autoplay=1&loop=1&modestbranding=1&' frameborder='0' controls='0' allowfullscreen></iframe>
+									    </div>
+									</div>
 								</article>
 							</div>
 						</div>
@@ -118,7 +126,11 @@ title: Chauffeur-privé - B2B home
 									<ul class="list">
 										<li><strong>Complète liberté et autonomie</strong> dans votre activité professionnelle. vous décidez de vos horaires !</li>
 									</ul>
-									<!-- Video here -->
+									<div class="roundVideo">
+									    <div class='embed-container'>
+									        <iframe id="vid3" class="rounded-vid" src='http://www.youtube.com/embed/bpOSxM0rNPM?&enablejsapi=1&controls=0&showinfo=0&autoplay=1&loop=1&modestbranding=1&' frameborder='0' controls='0' allowfullscreen></iframe>
+									    </div>
+									</div>
 								</article>
 							</div>
 						</div>
@@ -149,7 +161,12 @@ title: Chauffeur-privé - B2B home
 									<ul class="list">
 										<li><strong>Visibilité entre les chauffeurs</strong> connectés et affichage de leurs positions respectives.</li>
 									</ul>
-									<!-- Video here -->
+									
+									<div class="roundVideo">
+									    <div class='embed-container'>
+									        <iframe id="vid4" class="rounded-vid" src='http://www.youtube.com/embed/bpOSxM0rNPM?&enablejsapi=1&controls=0&showinfo=0&autoplay=1&loop=1&modestbranding=1&' frameborder='0' controls='0' allowfullscreen></iframe>
+									    </div>
+									</div>
 								</article>
 							</div>
 						</div>
@@ -162,14 +179,18 @@ title: Chauffeur-privé - B2B home
 						<p>Rejoignez une entreprise en pleine croissance, <strong>dynamique, conviviale et bosseuse !</strong></p>
 						<p>&nbsp;</p>
 						<div id="bubbles">
-							<%= image_tag "slides/bubbles/bubble1.jpg", :alt=>"Bubble", :class=>"bubble" %>
-							<%= image_tag "slides/bubbles/bubble2.jpg", :alt=>"Bubble", :class=>"bubble smaller" %>
-							<!-- Video centered in there -->
-							<%= image_tag "slides/bubbles/bubble2.jpg", :alt=>"Bubble", :class=>"bubble smaller right" %>
-							<%= image_tag "slides/bubbles/bubble1.jpg", :alt=>"Bubble", :class=>"bubble" %>
+							<%= image_tag "slides/bubbles/bubble1.jpg", :alt=>"Bubble", :class=>"bubble", :id=>"face1" %>
+							<%= image_tag "slides/bubbles/bubble2.jpg", :alt=>"Bubble", :class=>"bubble smaller", :id=>"face2" %>
+							<div class="roundVideo">
+							    <div class='embed-container'>
+							        <iframe id="vid5" class="rounded-vid" src='http://www.youtube.com/embed/bpOSxM0rNPM?&enablejsapi=1&controls=0&showinfo=0&autoplay=1&loop=1&modestbranding=1&' frameborder='0' controls='0' allowfullscreen></iframe>
+							    </div>
+							</div>
+							<%= image_tag "slides/bubbles/bubble2.jpg", :alt=>"Bubble", :class=>"bubble smaller right", :id=>"face3" %>
+							<%= image_tag "slides/bubbles/bubble1.jpg", :alt=>"Bubble", :class=>"bubble", :id=>"face4" %>
 						</div>
 						<div class="row">
-							<div class="medium-5 columns">
+							<div class="medium-5 columns noPad">
 								<ul class="checklist">
 									<li>Offrir un service agréable et de qualité</li>
 									<li>Être souriant</li>

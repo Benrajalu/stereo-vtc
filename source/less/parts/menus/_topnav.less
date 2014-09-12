@@ -4,6 +4,7 @@
 	line-height:81px;
 	#logo{
 		.inline-block();
+		margin-left:15px;
 		vertical-align: middle;
 		width:259px;
 		height:81px;
@@ -18,7 +19,9 @@
 	}
 
 	#menuContents{
-		float:right;
+		position:absolute;
+		top:0px;
+		right:15px;
 		display:block;
 		height:81px;
 		line-height:81px;
@@ -55,7 +58,7 @@
 		}
 
 		#menuContents{
-			float:none;
+			right:auto;
 			.transition(all 300ms ease-in);
 			position:absolute;
 			left:100%;

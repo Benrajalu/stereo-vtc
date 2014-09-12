@@ -1,0 +1,44 @@
+// Round-shaped videos
+.roundVideo{
+	width:180px;
+	height:180px;
+	border-radius:100%;
+	border:10px solid #eaeae8;
+	background:#eaeae8;
+	overflow:hidden;
+	position:relative;
+
+	.rounded-vid {
+	    -webkit-mask-image:url(http://www.stereosuper.fr/valid/chauffeurprive/mask.svg);  /* Chrome, Safari */
+	    border-radius:100%; /* Firefox */
+	}
+
+	.embed-container { 
+		padding-bottom: 56.25%; 
+		height: 0; 
+		overflow: hidden; 
+		max-width: 100%; 
+		height: auto; 
+
+		iframe, object, embed { 
+			position: 
+			absolute; 
+			top: 0; 
+			left: 0; 
+			width: 100%; 
+			height: 100%; 
+		}
+	} 
+	/* TODO TEST IE & FALLBACKS */ 
+}
+
+
+.box{
+	.clearfix();
+	.roundVideo{
+		float:right;
+		display:table;
+		right:-10px;
+		bottom:-10px;
+	}
+}
