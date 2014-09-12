@@ -1,0 +1,1 @@
+function onYouTubeIframeAPIReady(){muteVideos()}function onPlayerReady(e){e.target.mute()}var muteVideos=function(){$(".roundVideo").each(function(){var e=$(this).find("iframe").attr("id");console.log(e),player=new YT.Player(e,{events:{onReady:onPlayerReady}})})};
