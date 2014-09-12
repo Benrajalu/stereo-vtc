@@ -53,7 +53,7 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
- #set :relative_links, true
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
@@ -69,7 +69,7 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
-  activate :directory_indexes
+  #activate :directory_indexes
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

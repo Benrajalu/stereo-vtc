@@ -1,0 +1,79 @@
+.regularCopy{
+	.helvetica(#363636, 18px);
+	line-height:1.3;
+	margin-bottom:15px;
+	strong{
+		font-weight:bold;
+	}
+	em{
+		font-style: italic;
+	}
+	a{
+		text-decoration: underline;
+		color:#818ba2;
+		.transition(all 300ms ease-in-out);
+		&:hover{
+			color:@black;
+		}
+	}
+	&::last-child{
+		margin-bottom:0px;
+	}
+}
+
+
+.article{
+	&.material{
+		padding:40px 60px 50px 60px;
+		background:#f8f8f8;
+		.box-shadow(1px 0px 3px rgba(0,0,0,0.06));
+		margin-bottom:55px;
+		position:relative;
+		&::after{
+			content:" ";
+			display:block;
+			width:100%;
+			height:20px;
+			position:absolute;
+			z-index:2;
+			background:url("../img/dropShadow.png") center center no-repeat;
+			bottom:-20px;
+			left:0px;
+		}
+
+		@media only screen and (max-width:@mobile){
+			padding:40px 30px 50px 30px;
+		}
+	}
+
+	.title{
+		margin-bottom:45px;
+		// XL = H1 ou H2, ML = H2, H3 etc...
+		&.xl{
+			.helveticaBold(#797c80, 22px);
+			line-height:1.9;
+			text-transform: uppercase;
+		}
+		&.ml{
+			.helveticaBold(#797c80, 18px);
+			line-height:1.9;
+			text-transform: uppercase;
+		}
+		&.sl{
+			.helveticaBold(#797c80, 14px);
+			line-height:1.5;
+			text-transform: uppercase;
+		}
+		&.xs{
+			.helveticaBold(#797c80, 12px);
+			line-height:1.5;
+		}
+		&.underlined{
+			border-bottom:1px solid #797c80;
+		}
+	}
+
+	>p, >section>p{
+		.regularCopy();
+	}
+}

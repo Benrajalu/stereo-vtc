@@ -1,0 +1,39 @@
+// Dropdowns (FAQ)
+.dropdown{
+	dt{
+		margin-bottom:30px;
+		a{
+			.helveticaBold(#363636, 18px);
+			text-decoration:none;
+			padding-left:10px;
+			position:relative;
+			&::before{
+				display:block;
+				content:"";
+				width:7px;
+				height:12px;
+				background:url('../img/dropping.png') center center no-repeat;
+				position:absolute;
+				left:0px;
+				top:5px;
+			}
+
+			&.active{
+				&::before{
+					width:12px;
+					height:7px;
+					left:-3px;
+					top:8px;
+					background:url('../img/dropped.png') center center no-repeat;
+				}
+			}
+		}
+	}
+	dd{
+		display:none;
+		padding-bottom:40px;
+		p{
+			.regularCopy();
+		}
+	}
+}

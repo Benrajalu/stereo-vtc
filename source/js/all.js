@@ -16,9 +16,20 @@ $(window).load(function () {
 			pauseOnHover: true,
 			manualControls: "#sliderNav li a",
 			start: function(){
-				muteVideos();
+				defineVideos();
+			}, 
+			after: function(){
+				defineVideos();
 			}
 		});
+
+
+	// Dropdowns
+	$(".dropdown").find("dt a").click(function(event){
+		event.preventDefault();
+		$(this).toggleClass("active");
+		$(this).parent('dt').next("dd").slideToggle();
+	});
 
 
 	// Mobile menu button

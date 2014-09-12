@@ -1,10 +1,9 @@
 // Videos (youtube API and all)
 
-var muteVideos = function() {
+var defineVideos = function() {
 	$(".roundVideo").each(function(){
 		var vidID = $(this).find('iframe').attr("id");
-		console.log(vidID);
-		player = new YT.Player(vidID, {
+		var player = new YT.Player(vidID, {
 		events: {
 			'onReady': onPlayerReady
 			}
@@ -14,9 +13,11 @@ var muteVideos = function() {
 
 
 function onYouTubeIframeAPIReady() { 
-	muteVideos();
+	defineVideos();
 }
 
 function onPlayerReady(event) {
 	event.target.mute();
 }
+
+
