@@ -83,3 +83,8 @@ activate :deploy do |deploy|
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
 end
 
+configure :build do
+  compass_config do |config|
+    config.sass_options = {:debug_info => false}
+  end
+end

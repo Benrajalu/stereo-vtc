@@ -5,7 +5,7 @@
 	border-radius:100%;
 	border:10px solid #eaeae8;
 	background:#eaeae8;
-	overflow:hidden;
+	overflow:visible;
 	position:relative;
 
 	.rounded-vid {
@@ -40,14 +40,18 @@
 		height:40px;
 		.border-radius(9999px);
 		background:#eaeae8 url("../img/soundOFF.png") center center no-repeat;
-		text-indent:-9999px;
+		text-indent:-99999px;
 		ovevrlow:hidden;
 		-webkit-appearance:none;
 		.box-shadow(0px 0px 0px transparent);
 		border:0px;
 		z-index:2000;
 		&.unmuted{
-			background:url("../img/soundON.png") center center no-repeat;
+			background:#eaeae8 url("../img/soundON.png") center center no-repeat;
+		}
+		&:focus{
+			outline:0px;
+			border:0px;
 		}
 	}
 	/* TODO TEST IE & FALLBACKS */ 

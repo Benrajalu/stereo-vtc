@@ -7,19 +7,22 @@
 $(window).load(function () {
 
 	// Slider
+		$(".flexslider").addClass("ready");
 		$("#mainSlider").flexslider({
-			slideshow: false,
 			video: true,
+			touch: true,
 			controlNav: true, 
 			smoothHeight:true,
 			animation: "slide", 
 			pauseOnHover: true,
 			manualControls: "#sliderNav li a",
 			start: function(){
-				defineVideos();
+				muteAll();
+				muteSlider();
 			}, 
 			after: function(){
-				defineVideos();
+				muteAll();
+				muteSlider();
 			}
 		});
 
@@ -41,5 +44,35 @@ $(window).load(function () {
 			  $("#topNav").toggleClass("open");
 			})
 		}());
+
+	// Horizontal scroll
+	var scrollAnimation = function(){
+		if($('#sliderNav ul').hasClass("animated")){
+			return false;
+		}
+		else{
+			$('#sliderNav ul').stop().animate({
+	            scrollLeft: 300
+	        }, 500).delay(300).animate({
+	            scrollLeft: 0
+	        }, 500).addClass("animated");	
+		}
+	}
+
+	$("#sliderNav ul").perfectScrollbar({
+		suppressScrollY: true
+	});
+
+	if(Modernizr.mq('only all and (max-width: 1020px)')){
+		scrollAnimation();
+	}
+
+	$(window).resize(function(){
+		$("#sliderNav ul").perfectScrollbar('update');
+		if(Modernizr.mq('only all and (max-width: 1020px)')){
+			scrollAnimation();
+		}
+	})
+
 
 });

@@ -937,6 +937,134 @@ html[xmlns] .flexslider .slides {
     right: 10px;
   }
 }
+.ps-container .ps-scrollbar-x-rail {
+  position: absolute;
+  /* please don't change 'position' */
+  bottom: 3px;
+  /* there must be 'bottom' for ps-scrollbar-x-rail */
+  height: 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -o-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+}
+.ps-container:hover .ps-scrollbar-x-rail,
+.ps-container.hover .ps-scrollbar-x-rail {
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.ps-container .ps-scrollbar-x-rail:hover,
+.ps-container .ps-scrollbar-x-rail.hover {
+  background-color: #eee;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.ps-container .ps-scrollbar-x-rail.in-scrolling {
+  background-color: #eee;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.ps-container .ps-scrollbar-y-rail {
+  position: absolute;
+  /* please don't change 'position' */
+  right: 3px;
+  /* there must be 'right' for ps-scrollbar-y-rail */
+  width: 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -o-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+}
+.ps-container:hover .ps-scrollbar-y-rail,
+.ps-container.hover .ps-scrollbar-y-rail {
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.ps-container .ps-scrollbar-y-rail:hover,
+.ps-container .ps-scrollbar-y-rail.hover {
+  background-color: #eee;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.ps-container .ps-scrollbar-y-rail.in-scrolling {
+  background-color: #eee;
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.ps-container .ps-scrollbar-x {
+  position: absolute;
+  /* please don't change 'position' */
+  bottom: 0;
+  /* there must be 'bottom' for ps-scrollbar-x */
+  height: 8px;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -o-transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.ps-container.ie6 .ps-scrollbar-x {
+  font-size: 0;
+  /* fixed scrollbar height in xp sp3 ie6 */
+}
+.ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x,
+.ps-container .ps-scrollbar-x-rail.hover .ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container .ps-scrollbar-y {
+  position: absolute;
+  /* please don't change 'position' */
+  right: 0;
+  /* there must be 'right' for ps-scrollbar-y */
+  width: 8px;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -o-transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.ps-container.ie6 .ps-scrollbar-y {
+  font-size: 0;
+  /* fixed scrollbar height in xp sp3 ie6 */
+}
+.ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y,
+.ps-container .ps-scrollbar-y-rail.hover .ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container.ie .ps-scrollbar-x,
+.ps-container.ie .ps-scrollbar-y {
+  visibility: hidden;
+}
+.ps-container.ie:hover .ps-scrollbar-x,
+.ps-container.ie:hover .ps-scrollbar-y,
+.ps-container.ie.hover .ps-scrollbar-x,
+.ps-container.ie.hover .ps-scrollbar-y {
+  visibility: visible;
+}
 #topNav {
   background: #000000;
   height: 81px;
@@ -1152,6 +1280,12 @@ html[xmlns] .flexslider .slides {
     opacity: 1;
   }
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (max-width: 690px) {
+  #topNav {
+    background: url('../img/logocp.png') center center;
+    background-size: 150px 19px;
+  }
+}
 #sliderNav {
   height: 83px;
   line-height: 83px;
@@ -1322,10 +1456,9 @@ html[xmlns] .flexslider .slides {
 }
 @media only screen and (max-width: 1020px) {
   #sliderNav ul {
-    overflow-y: hidden;
-    overflow-x: scroll;
     white-space: nowrap;
-    font-size: 0;
+    position: relative;
+    overflow: hidden;
   }
   #sliderNav ul li {
     float: none;
@@ -1347,9 +1480,6 @@ html[xmlns] .flexslider .slides {
 }
 #mainSlider {
   padding: 0px 50px;
-}
-#mainSlider .slides {
-  height: 566px;
 }
 #mainSlider .slides > li.madeInFrance {
   position: relative;
@@ -1548,7 +1678,8 @@ html[xmlns] .flexslider .slides {
   text-align: center;
   line-height: 270px;
 }
-#mainSlider .slides #bubbles .bubble {
+#mainSlider .slides #bubbles img.bubble {
+  width: auto;
   border: 10px solid #f3f3f1;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
@@ -1572,18 +1703,17 @@ html[xmlns] .flexslider .slides {
   -moz-box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.06) 1px 2px rgba(0, 0, 0, 0.1);
   -o-box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.06) 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.06) 1px 2px rgba(0, 0, 0, 0.1);
-  width: auto;
   display: inline-block;
   *display: inline;
   zoom: 1;
   vertical-align: middle;
 }
-#mainSlider .slides #bubbles .bubble.smaller {
+#mainSlider .slides #bubbles img.bubble.smaller {
   position: relative;
   top: 30px;
   margin-right: 60px;
 }
-#mainSlider .slides #bubbles .bubble.smaller.right {
+#mainSlider .slides #bubbles img.bubble.smaller.right {
   margin-right: 0px;
   margin-left: 60px;
 }
@@ -1649,34 +1779,35 @@ html[xmlns] .flexslider .slides {
   #mainSlider .slides #bubbles:after {
     clear: both;
   }
-  #mainSlider .slides #bubbles .bubble {
+  #mainSlider .slides #bubbles img.bubble {
+    width: auto;
     position: relative;
   }
-  #mainSlider .slides #bubbles .bubble.smaller {
+  #mainSlider .slides #bubbles img.bubble.smaller {
     position: absolute;
   }
-  #mainSlider .slides #bubbles .bubble.smaller.left,
-  #mainSlider .slides #bubbles .bubble.smaller.right {
+  #mainSlider .slides #bubbles img.bubble.smaller.left,
+  #mainSlider .slides #bubbles img.bubble.smaller.right {
     top: auto;
     position: absolute;
   }
-  #mainSlider .slides #bubbles .bubble#face1 {
+  #mainSlider .slides #bubbles img.bubble#face1 {
     margin-bottom: 90px;
   }
-  #mainSlider .slides #bubbles .bubble#face2 {
+  #mainSlider .slides #bubbles img.bubble#face2 {
     bottom: auto;
     left: auto;
     top: 50px;
     right: 0px;
     margin: 0px;
   }
-  #mainSlider .slides #bubbles .bubble#face3 {
+  #mainSlider .slides #bubbles img.bubble#face3 {
     bottom: 110px;
     left: 0px;
     margin: 0px;
     right: auto;
   }
-  #mainSlider .slides #bubbles .bubble#face4 {
+  #mainSlider .slides #bubbles img.bubble#face4 {
     margin: 30px 0px;
     float: right;
   }
@@ -1746,13 +1877,35 @@ html[xmlns] .flexslider .slides {
     padding: 50px 0px;
   }
 }
+.flexslider {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all all 300ms ease-in-out ease;
+  -moz-transition: all all 300ms ease-in-out ease;
+  -ms-transition: all all 300ms ease-in-out ease;
+  -o-transition: all all 300ms ease-in-out ease;
+  transition: all all 300ms ease-in-out ease;
+  background: url("../img/loading.gif") center center no-repeat;
+  min-height: 300px;
+}
+.flexslider .slides {
+  display: none;
+}
+.flexslider.ready {
+  background: transparent;
+}
+.flexslider.ready .slides {
+  display: block;
+}
 .roundVideo {
   width: 180px;
   height: 180px;
   border-radius: 100%;
   border: 10px solid #eaeae8;
   background: #eaeae8;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   /* TODO TEST IE & FALLBACKS */
 }
@@ -1792,7 +1945,7 @@ html[xmlns] .flexslider .slides {
   -moz-border-radius: 9999px;
   border-radius: 9999px;
   background: #eaeae8 url("../img/soundOFF.png") center center no-repeat;
-  text-indent: -9999px;
+  text-indent: -99999px;
   ovevrlow: hidden;
   -webkit-appearance: none;
   -webkit-box-shadow: 0px 0px 0px transparent;
@@ -1806,7 +1959,11 @@ html[xmlns] .flexslider .slides {
   z-index: 2000;
 }
 .roundVideo .mute.unmuted {
-  background: url("../img/soundON.png") center center no-repeat;
+  background: #eaeae8 url("../img/soundON.png") center center no-repeat;
+}
+.roundVideo .mute:focus {
+  outline: 0px;
+  border: 0px;
 }
 .box {
   *zoom: 1;
@@ -2167,12 +2324,24 @@ html[xmlns] .flexslider .slides {
   left: 0px;
   top: 5px;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .dropdown dt a::before {
+    background: url('../img/droppingx2.png') center center;
+    background-size: 7px 13px;
+  }
+}
 .dropdown dt a.active::before {
   width: 12px;
   height: 7px;
   left: -3px;
   top: 8px;
   background: url('../img/dropped.png') center center no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .dropdown dt a.active::before {
+    background: url('../img/droppedx2.png') center center;
+    background-size: 13px 7px;
+  }
 }
 .dropdown dd {
   display: none;

@@ -2,7 +2,6 @@
 	#mainSlider{
 		padding:0px 50px;
 		.slides{
-			height:566px;
 			>li{
 				// Specific slides
 				&.madeInFrance{
@@ -158,12 +157,12 @@
 				position:relative;
 				text-align:center;
 				line-height:270px;
-				.bubble{
+				img.bubble{
+					width:auto;
 					border:10px solid #f3f3f1;
 					.transition(all 300ms ease-in-out);
 					.border-radius(9999px);
 					.box-shadow(2px 2px 5px rgba(0,0,0,0.06));
-					width:auto;
 					.inline-block();
 					vertical-align: middle;
 					&.smaller{
@@ -227,7 +226,8 @@
 				@media only screen and (max-width: @mobile){
 					height:auto;
 					.clearfix();
-					.bubble{
+					img.bubble{
+						width:auto;
 						position:relative;
 						&.smaller{
 							position:absolute;
@@ -331,6 +331,24 @@
 						padding:50px 0px;
 					}
 				}
+			}
+		}
+	}
+
+
+	.flexslider{
+		.transition(all 300ms ease-in-out);
+		background:url("../img/loading.gif") center center no-repeat;
+		min-height:300px;
+		.slides{
+			display:none;
+		}
+
+		&.ready{
+			background:transparent;
+			//max-height:99999px;
+			.slides{
+				display:block;
 			}
 		}
 	}
