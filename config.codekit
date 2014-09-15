@@ -126,6 +126,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/droppedx2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1134,
+		"inputAbbreviatedPath": "\/img\/droppedx2.png",
+		"outputAbbreviatedPath": "\/img\/droppedx2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/dropping.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -133,6 +144,17 @@
 		"initialSize": 991,
 		"inputAbbreviatedPath": "\/img\/dropping.png",
 		"outputAbbreviatedPath": "\/img\/dropping.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/droppingx2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1133,
+		"inputAbbreviatedPath": "\/img\/droppingx2.png",
+		"outputAbbreviatedPath": "\/img\/droppingx2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
