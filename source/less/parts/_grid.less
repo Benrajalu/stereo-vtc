@@ -227,3 +227,15 @@
 				.smallPush(@n, (@i + 1));
 			}
 	}
+
+	.mobileBreak{
+		display:none;
+		@media only screen and (max-width:@mobile){
+			display:block;
+			height:0px;
+			.clearfix();
+			border:0px transparent;
+			padding:0px;
+			margin:0px;
+		}
+	}

@@ -1,4 +1,5 @@
 .form{
+	margin-bottom:80px;
 	*[type="hidden"]{
 		display:none;
 	}
@@ -6,16 +7,27 @@
 		.title.ml{
 			margin-bottom:25px;
 		}
-	}
 
-	.tight{
-		width:90%;
-		margin:0 auto;
+		&.centered{
+			padding:0px 15px;
+			@media only screen and (max-width:@mobile){
+				.list.dash{
+					li{
+						a{
+							display:block;
+						}
+					}
+				}
+			}
+		}
 	}
-	.pad{
-		padding:0px 30px;
+	
+	// Items needed as groups only on mobile
+	.mobileGroup{
+		display:inline;
 	}
-
+	
+	// Lists enclosing the inputs
 	.scope{
 		li{
 			list-style-type: none;
@@ -23,22 +35,175 @@
 			line-height:34px;
 			margin-bottom:11px;
 			position:relative;
-			label, input, select{
+			label, input, select, textarea{
 				.inline-block();
 				line-height:1;
 				vertical-align: middle;
 			}
+			&.top{
+				label, textarea{
+					vertical-align: top;
+				}
+			}
+			.legend{
+				.helvetica(#878787, 14px);
+				font-style: italic;
+			}
+		}
+
+		&.tight{
+			width:90%;
+			margin:0 auto;
+			@media only screen and (max-width:955px){
+				width:95%;
+			}
+		}
+
+		&.pad{
+			padding:0px 30px;
+			@media only screen and (max-width:@mobile){
+				padding: 0px;
+			}
+		}
+
+		&.checkboxes{
+			li{
+				line-height:1;
+				min-height:0px;
+				margin-bottom:20px;
+				input[type='checkbox']{
+					position:absolute;
+					left:0px;
+					top:4px;
+					z-index:2;
+					display:block;
+					margin:0px;
+				}
+				label{
+					padding-left:20px;
+					display:block;
+				}
+			}
+		}
+
+		&.aligned{
+			label{
+				width:100px;
+				text-align:right;
+				margin-left:0px;
+				white-space: nowrap;
+				&.radioLabel, &.checkLabel{
+					width:auto;
+					text-align: left;
+					margin-left:10px;
+				}
+			}
+			&.large{
+				label{
+					width:140px;
+					&.radioLabel, &.checkLabel{
+						width:auto;
+						text-align: left;
+						margin-left:10px;
+					}
+				}
+			}
+			input[type='email']{
+				width:280px;
+			}
+			textarea{
+				width:340px;
+			}
+			input[name='cp']{
+				width:70px;
+			}
+			@media only screen and (max-width:815px){
+				li{
+					display:table;
+					width:100%;
+					.mobileGroup{
+						display: table-cell;
+						width:50%;
+					}
+				}
+				label{
+					display:block;
+					width:100%;
+					text-align: left;
+					margin-bottom:5px;
+					&.radioLabel{
+						.inline-block();
+						width:auto;
+						margin-bottom:0px;
+					}
+				}
+				input[type='text']{
+					width:90%;
+					&.legended{
+						width:70%;
+					}
+				}
+			}
+			@media only screen and (max-width: @mobile){
+				li{
+					display:block;
+					.clearfix();
+					.mobileGroup{
+						display: block;
+						width:100%;
+						margin-bottom:10px;
+					}
+				}
+				label{
+					display:block;
+					width:100%;
+					text-align: left;
+					margin-bottom:5px;
+				}
+				input[type='text'], input[type='email'], textarea{
+					width:100%;
+					&.legended{
+						width:100%;
+					}
+				}
+
+				.ttip.solo{
+					position:absolute;
+					right:15px;
+					top:33px;
+					display:block;
+					height:16px;
+				}
+			}
 		}
 	}
+
+	// Input styles
 
 	label{
 		.helveticaBold(#363636, 18px);
 		margin:0 20px;
+		&.noBold{
+			font-weight: normal;
+		}
 		abbr{
 			color:@red;
 			text-decoration: none;
 			border:0px;
 			font-weight: normal;
+		}
+		.ttip{
+			.helveticaBold(#363636, 18px);
+			text-decoration:none;
+		}
+		&.checkLabel{
+			.helvetica(#363636, 18px);
+			margin:0px 10px;
+		}
+
+		&.radioLabel{
+			.helvetica(#363636, 18px);
+			margin:0px 10px;
 		}
 	}
 
@@ -105,6 +270,9 @@
 		&:hover{
 			opacity:0.9;
 			.box-shadow(2px 2px 5px rgba(0,0,0,0.2));
+		}
+		@media only screen and (max-width:@mobile){
+			margin-bottom:50px;
 		}
 	}
 

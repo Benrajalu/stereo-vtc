@@ -652,6 +652,29 @@
     width: 100%;
   }
 }
+.mobileBreak {
+  display: none;
+}
+@media only screen and (max-width: 690px) {
+  .mobileBreak {
+    display: block;
+    height: 0px;
+    *zoom: 1;
+    border: 0px transparent;
+    padding: 0px;
+    margin: 0px;
+  }
+  .mobileBreak:before,
+  .mobileBreak:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  .mobileBreak:after {
+    clear: both;
+  }
+}
 /*
  * jQuery FlexSlider v2.2.0
  * http://www.woothemes.com/flexslider/
@@ -1280,7 +1303,7 @@ html[xmlns] .flexslider .slides {
     opacity: 1;
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (max-width: 690px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
   #topNav #logo {
     background: url('../img/logocp.jpg') center left no-repeat;
     background-size: 150px 19px;
@@ -1984,18 +2007,25 @@ html[xmlns] .flexslider .slides {
   right: -10px;
   bottom: -10px;
 }
+.form {
+  margin-bottom: 80px;
+}
 .form *[type="hidden"] {
   display: none;
 }
 .form .article .title.ml {
   margin-bottom: 25px;
 }
-.form .tight {
-  width: 90%;
-  margin: 0 auto;
+.form .article.centered {
+  padding: 0px 15px;
 }
-.form .pad {
-  padding: 0px 30px;
+@media only screen and (max-width: 690px) {
+  .form .article.centered .list.dash li a {
+    display: block;
+  }
+}
+.form .mobileGroup {
+  display: inline;
 }
 .form .scope li {
   list-style-type: none;
@@ -2006,12 +2036,161 @@ html[xmlns] .flexslider .slides {
 }
 .form .scope li label,
 .form .scope li input,
-.form .scope li select {
+.form .scope li select,
+.form .scope li textarea {
   display: inline-block;
   *display: inline;
   zoom: 1;
   line-height: 1;
   vertical-align: middle;
+}
+.form .scope li.top label,
+.form .scope li.top textarea {
+  vertical-align: top;
+}
+.form .scope li .legend {
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #878787;
+  font-size: 14px;
+  font-style: italic;
+}
+.form .scope.tight {
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 955px) {
+  .form .scope.tight {
+    width: 95%;
+  }
+}
+.form .scope.pad {
+  padding: 0px 30px;
+}
+@media only screen and (max-width: 690px) {
+  .form .scope.pad {
+    padding: 0px;
+  }
+}
+.form .scope.checkboxes li {
+  line-height: 1;
+  min-height: 0px;
+  margin-bottom: 20px;
+}
+.form .scope.checkboxes li input[type='checkbox'] {
+  position: absolute;
+  left: 0px;
+  top: 4px;
+  z-index: 2;
+  display: block;
+  margin: 0px;
+}
+.form .scope.checkboxes li label {
+  padding-left: 20px;
+  display: block;
+}
+.form .scope.aligned label {
+  width: 100px;
+  text-align: right;
+  margin-left: 0px;
+  white-space: nowrap;
+}
+.form .scope.aligned label.radioLabel,
+.form .scope.aligned label.checkLabel {
+  width: auto;
+  text-align: left;
+  margin-left: 10px;
+}
+.form .scope.aligned.large label {
+  width: 140px;
+}
+.form .scope.aligned.large label.radioLabel,
+.form .scope.aligned.large label.checkLabel {
+  width: auto;
+  text-align: left;
+  margin-left: 10px;
+}
+.form .scope.aligned input[type='email'] {
+  width: 280px;
+}
+.form .scope.aligned textarea {
+  width: 340px;
+}
+.form .scope.aligned input[name='cp'] {
+  width: 70px;
+}
+@media only screen and (max-width: 815px) {
+  .form .scope.aligned li {
+    display: table;
+    width: 100%;
+  }
+  .form .scope.aligned li .mobileGroup {
+    display: table-cell;
+    width: 50%;
+  }
+  .form .scope.aligned label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  .form .scope.aligned label.radioLabel {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: auto;
+    margin-bottom: 0px;
+  }
+  .form .scope.aligned input[type='text'] {
+    width: 90%;
+  }
+  .form .scope.aligned input[type='text'].legended {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .form .scope.aligned li {
+    display: block;
+    *zoom: 1;
+  }
+  .form .scope.aligned li:before,
+  .form .scope.aligned li:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  .form .scope.aligned li:after {
+    clear: both;
+  }
+  .form .scope.aligned li .mobileGroup {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .form .scope.aligned label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  .form .scope.aligned input[type='text'],
+  .form .scope.aligned input[type='email'],
+  .form .scope.aligned textarea {
+    width: 100%;
+  }
+  .form .scope.aligned input[type='text'].legended,
+  .form .scope.aligned input[type='email'].legended,
+  .form .scope.aligned textarea.legended {
+    width: 100%;
+  }
+  .form .scope.aligned .ttip.solo {
+    position: absolute;
+    right: 15px;
+    top: 33px;
+    display: block;
+    height: 16px;
+  }
 }
 .form label {
   font-family: sans-serif;
@@ -2020,11 +2199,35 @@ html[xmlns] .flexslider .slides {
   font-size: 18px;
   margin: 0 20px;
 }
+.form label.noBold {
+  font-weight: normal;
+}
 .form label abbr {
   color: #ae2d2b;
   text-decoration: none;
   border: 0px;
   font-weight: normal;
+}
+.form label .ttip {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #363636;
+  font-size: 18px;
+  text-decoration: none;
+}
+.form label.checkLabel {
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #363636;
+  font-size: 18px;
+  margin: 0px 10px;
+}
+.form label.radioLabel {
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #363636;
+  font-size: 18px;
+  margin: 0px 10px;
 }
 .form input[type='text'],
 .form input[type='email'] {
@@ -2176,6 +2379,11 @@ html[xmlns] .flexslider .slides {
   -moz-box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
   -o-box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 690px) {
+  .form input[type='submit'] {
+    margin-bottom: 50px;
+  }
 }
 .form #regionSwitch {
   *zoom: 1;
@@ -2329,6 +2537,70 @@ html[xmlns] .flexslider .slides {
   .form #regionSwitch .switch.azur.active {
     background: #f7f7f2;
   }
+}
+#tooltip {
+  text-align: center;
+  color: #fff;
+  background: rgba(53, 55, 60, 0.9);
+  position: absolute;
+  z-index: 100;
+  padding: 25px 30px 30px;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #eaeae8;
+  font-size: 15px;
+  line-height: 1.2;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+#tooltip::after {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(53, 55, 60, 0.9);
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -10px;
+}
+#tooltip.top::after {
+  border-top-color: transparent;
+  border-bottom: 10px solid rgba(53, 55, 60, 0.9);
+  top: -20px;
+  bottom: auto;
+}
+ #tooltip.left::after {
+  left: 10px;
+  margin: 0;
+}
+ #tooltip.right::after {
+  right: 10px;
+  left: auto;
+  margin: 0;
+}
+#tooltip.leftMost::after {
+  left: 0px;
+  bottom: 50%;
+  margin-bottom: -13px;
+  border: 0px transparent;
+  border-top: 10px solid transparent;
+  border-right: 10px solid rgba(53, 55, 60, 0.9);
+  border-bottom: 10px solid transparent;
+}
+.ttip {
+  padding-right: 20px;
+  position: relative;
+  background: url('../img/form/ttip.png') center right no-repeat;
+}
+.ttip.solo {
+  padding-right: 16px;
+  margin-right: 5px;
 }
 .pageTitle.xl {
   font-family: sans-serif;

@@ -1,0 +1,60 @@
+#tooltip{
+    text-align: center;
+    color: #fff;
+    background: rgba(53,55,60,0.9);
+    position: absolute;
+    z-index: 100;
+    padding: 25px 30px 30px;
+	.helvetica(#eaeae8, 15px);
+	line-height: 1.2;
+	.border-radius(10px);
+	&::after{
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid rgba(53,55,60,0.9);
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+	
+	&.top::after{
+       border-top-color: transparent;
+       border-bottom: 10px solid rgba(53,55,60,0.9);
+       top: -20px;
+       bottom: auto;
+   }
+ 
+   &.left::after{
+       left: 10px;
+       margin: 0;
+   }
+ 
+   &.right::after {
+       right: 10px;
+       left: auto;
+       margin: 0;
+   }
+	&.leftMost::after{
+		left:0px;
+		bottom:50%;
+		margin-bottom: -13px;
+		border:0px transparent;
+		border-top: 10px solid transparent;
+        border-right: 10px solid rgba(53,55,60,0.9);
+        border-bottom: 10px solid transparent;
+	}
+}
+
+.ttip{
+	padding-right:20px;
+	position:relative;
+	background:url('../img/form/ttip.png') center right no-repeat;
+	&.solo{
+		padding-right:16px;
+		margin-right: 5px;
+	}
+}
