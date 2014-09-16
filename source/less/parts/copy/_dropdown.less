@@ -1,0 +1,57 @@
+// Dropdowns (FAQ)
+.dropdown{
+	dt{
+		margin-bottom:30px;
+		a{
+			.helveticaBold(#363636, 18px);
+			text-decoration:none;
+			padding-left:10px;
+			position:relative;
+			&::before{
+				display:block;
+				content:"";
+				width:7px;
+				height:12px;
+				background:url('../img/dropping.png') center center no-repeat;
+				position:absolute;
+				left:0px;
+				top:5px;
+				@media only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (   min--moz-device-pixel-ratio: 2),
+				only screen and (     -o-min-device-pixel-ratio: 2/1),
+				only screen and (        min-device-pixel-ratio: 2),
+				only screen and (                min-resolution: 192dpi),
+				only screen and (                min-resolution: 2dppx) { 
+					background:url('../img/droppingx2.png') center center;
+					background-size: 7px 13px;
+				}
+			}
+
+			&.active{
+				&::before{
+					width:12px;
+					height:7px;
+					left:-3px;
+					top:8px;
+					background:url('../img/dropped.png') center center no-repeat;
+					@media only screen and (-webkit-min-device-pixel-ratio: 2),
+					only screen and (   min--moz-device-pixel-ratio: 2),
+					only screen and (     -o-min-device-pixel-ratio: 2/1),
+					only screen and (        min-device-pixel-ratio: 2),
+					only screen and (                min-resolution: 192dpi),
+					only screen and (                min-resolution: 2dppx) { 
+						background:url('../img/droppedx2.png') center center;
+						background-size:13px 7px;
+					}
+				}
+			}
+		}
+	}
+	dd{
+		display:none;
+		padding-bottom:40px;
+		p{
+			.regularCopy();
+		}
+	}
+}

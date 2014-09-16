@@ -1,0 +1,79 @@
+// Round-shaped videos
+.roundVideo{
+	width:180px;
+	height:180px;
+	border-radius:100%;
+	border:10px solid #eaeae8;
+	background:#eaeae8;
+	overflow:visible;
+	position:relative;
+
+	.rounded-vid {
+	    -webkit-mask-image:url(http://www.stereosuper.fr/valid/chauffeurprive/mask.svg);  /* Chrome, Safari */
+	    border-radius:100%; /* Firefox */
+	}
+
+	.embed-container { 
+		padding-bottom: 56.25%; 
+		height: 0; 
+		overflow: hidden; 
+		max-width: 100%; 
+		height: auto; 
+
+		iframe, object, embed { 
+			position: 
+			absolute; 
+			top: 0; 
+			left: 0; 
+			width: 100%; 
+			height: 100%; 
+		}
+	} 
+
+
+	.mute{
+		display:block;
+		position:absolute;
+		bottom:5px;
+		left:0px;
+		width:40px;
+		height:40px;
+		.border-radius(9999px);
+		background:#eaeae8 url("../img/soundOFF.png") center center no-repeat;
+		text-indent:-99999px;
+		ovevrlow:hidden;
+		-webkit-appearance:none;
+		.box-shadow(0px 0px 0px transparent);
+		border:0px;
+		z-index:2000;
+		&.unmuted{
+			background:#eaeae8 url("../img/soundON.png") center center no-repeat;
+		}
+		&:focus{
+			outline:0px;
+			border:0px;
+		}
+	}
+
+	@media only screen and (max-width: @mobile){
+		display:none;
+	}
+	/* TODO TEST IE & FALLBACKS */ 
+}
+
+
+.box{
+	.clearfix();
+	.roundVideo{
+		float:right;
+		display:table;
+		right:-10px;
+		bottom:-10px;
+		@media only screen and (max-width: @mobile){
+			display:none;
+		}
+	}
+	@media only screen and (max-width: @mobile){
+		padding-bottom:30px;
+	}
+}

@@ -16,3 +16,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 # Less
 gem 'less'
 gem 'therubyracer'
+
+# Deploy to gitpages
+gem 'middleman-deploy', '~> 0.3.0'

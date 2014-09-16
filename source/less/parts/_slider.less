@@ -1,0 +1,137 @@
+// Let's style the index's slider
+	#mainSlider{
+		padding:0px 50px;
+		.slides{
+			>li{
+				// Specific slides
+				&.madeInFrance{
+					position:relative;
+					overflow: hidden;
+					&::before{
+						content:' ';
+						display:block;
+						position:absolute;
+						left:15px;
+						background:url("../img/slides/slide5-logo.png") center center no-repeat;
+						width:123px;
+						height:54px;
+						top:-100px;
+						opacity:0.1;
+						.transition(all 300ms ease-in-out);
+						.transition-delay(800ms);
+					}
+					&.flex-active-slide{
+						&::before{
+							top:0px;
+							opacity:1;
+							@media only screen and (max-width: @tablet){
+								top:-5px;
+							}
+						}
+					}
+				}
+			}
+			
+			// Grid behavior
+			.row{
+				padding-top:50px;
+				.columns{
+					text-align:center;
+					img{
+						display:block;
+						margin:0 auto 15px auto;
+						max-width: 243px;
+						@media only screen and (max-width: @mobile){
+							max-width: 193px;
+						}
+					}
+					>p{
+						width:86%;
+					}
+				}
+
+				@media only screen and (max-width: @mobile){
+					padding-top:20px;
+					.columns{
+						margin-bottom:15px;
+						&.noPad{
+							margin-bottom:0px;
+						}
+					}
+				}
+			}
+		}
+
+
+		// Navigation
+
+		.flex-direction-nav{
+			.flex-prev, .flex-next{
+				opacity:1;
+				border:0px;
+				text-shadow:0px 0px 0px transparent;
+				content:" ";
+				text-indent:-9999px;
+				overflow:hidden;
+				background-image:url("../img/prevNext.png");
+				background-repeat:no-repeat;
+				height:40px;
+				width:24px;
+				&:hover{
+					background-image:url("../img/prevNextHover.png");
+				}
+			}
+			.flex-prev{
+				left:2px;
+				background-position:0px 0px;
+				&:hover{
+					left:3px;
+				}
+			}
+			.flex-next{
+				right:2px;
+				text-indent: 9999px;
+				background-position:-24px 0px;
+				&:hover{
+					right:3px;
+				}
+			}
+			@media only screen and (max-width: @mobile){
+				display:none;
+			}
+		}
+
+
+		@media only screen and (max-width: @tablet){
+			.slides{
+				height:auto;
+				>li{
+					>.slideContent{
+						padding:50px 0px;
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width: @mobile){
+			padding:0px 20px;
+		}
+
+	}
+	
+	.flexslider{
+		.transition(all 300ms ease-in-out);
+		background:url("../img/loading.gif") center center no-repeat;
+		min-height:300px;
+		.slides{
+			display:none;
+		}
+
+		&.ready{
+			background:transparent;
+			//max-height:99999px;
+			.slides{
+				display:block;
+			}
+		}
+	}
