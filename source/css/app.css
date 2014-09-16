@@ -1498,6 +1498,10 @@ html[xmlns] .flexslider .slides {
     margin: 0px;
     height: 60px;
     line-height: 60px;
+    margin-left: -0.25em;
+  }
+  #sliderNav ul li:first-child {
+    margin-left: 0px;
   }
   #sliderNav ul li a::before {
     top: -3px;
