@@ -9,6 +9,7 @@ $(window).load(function () {
 	// Slider
 		$(".flexslider").addClass("ready");
 		$("#mainSlider").flexslider({
+			slideshow:false,
 			video: true,
 			touch: true,
 			controlNav: true, 
@@ -85,8 +86,25 @@ $(window).load(function () {
 					$(".switch").removeClass("active");
 					$(this).addClass("active");
 					sel.val(tar);
-					console.log(sel.val());
 				}
 			})
+		})
+
+	// Splitscreen even
+		var tieScreens = function(){
+			var row = $(".splitScreen.centered"),
+				leftHeight =row.find('.row.left').outerHeight(),
+				rightHeight = row.find('.row.right').outerHeight();
+
+			if(leftHeight > rightHeight){
+				$(row).find('.row.right').outerHeight(leftHeight);
+			}
+			else{
+				$(row).find('.row.left').outerHeight(rightHeight);
+			}
+		}
+		tieScreens();
+		$(window).resize(function(){
+			tieScreens();
 		})
 });

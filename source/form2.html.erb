@@ -3,34 +3,15 @@ title: Chauffeur-privé - B2B form
 ---
 
 <div class="row">
-	<h1 class="pageTitle xl indented">Inscription Chauffeur Eco 
+	<h1 class="pageTitle xl indented">Inscription avec demande de véhicule 
 		<%= link_to "Changer de catégorie", 'select.html', :class=>"titleLink" %>
 	</h1>
 	
 	<article>
 		<form id="mainForm" action="#" name="mainForm" class="form">
-			<section class="article material">
-				<h2 class="title ml underlined">1. Choix de la région</h2>
-
-				<div id="regionSwitch">
-					<a href="#" data-value="paris" class="switch paris">
-						<span>Région <br/>Parisienne</span>
-					</a>
-
-					<a href="#" data-value="azur" class="switch azur">
-						<span>Côte d'Azur</span>
-					</a>
-				</div>
-
-				<select name="region" id="region" type="hidden">
-					<option value=""></option>
-					<option value="paris">Région Parisienne</option>
-					<option value="azur">Côte d'Azur</option>
-				</select>
-			</section>
 
 			<section class="article material">
-				<h2 class="title ml underlined">2. Informations personnelles</h2>
+				<h2 class="title ml underlined">1. Informations personnelles</h2>
 				<ul class="scope tight aligned">
 					<li>
 						<div class="mobileGroup"><label for="nom">Nom<abbr title="obligatoire">*</abbr></label>
@@ -60,7 +41,7 @@ title: Chauffeur-privé - B2B form
 			</section>
 
 			<section class="article material">
-				<h2 class="title ml underlined">3. Informations relatives au transport de personnes <span class="smaller">(plusieurs réponses possibles)</span></h2>
+				<h2 class="title ml underlined">2. Informations relatives au transport de personnes <span class="smaller">(plusieurs réponses possibles)</span></h2>
 				<ul class="scope pad checkboxes">
 					<li>
 						<input type="checkbox" name="vtc" id="vtc" value="Carte VTC"/>
@@ -97,7 +78,7 @@ title: Chauffeur-privé - B2B form
 			</section>
 
 			<section class="article material">
-				<h2 class="title ml underlined">4. Informations de facturation</h2>
+				<h2 class="title ml underlined">3. Informations de facturation</h2>
 				<ul class="scope pad aligned large">
 					<li>
 						<label>Status<abbr>*</abbre></label>
@@ -126,7 +107,7 @@ title: Chauffeur-privé - B2B form
 			</section>
 
 			<section class="article material">
-				<h2 class="title ml underlined">5. Message ou informations complémentaires <span class="smaller">(facultatif)</span></h2>
+				<h2 class="title ml underlined">4. Message ou informations complémentaires <span class="smaller">(facultatif)</span></h2>
 				<textarea id="largeMessage" name="message" class="large"></textarea>
 			</section>
 

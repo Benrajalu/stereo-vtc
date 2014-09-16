@@ -1,4 +1,15 @@
 .splitScreen{
+	.row{
+		&.right{
+			text-align:left;
+			padding-left:40px;
+		}
+		&.left{
+			text-align:right;
+			padding-right:40px;
+		}
+	}
+
 	.title.ml{
 		.helveticaBold(#23262b, 33px);
 		line-height:1.2;
@@ -58,26 +69,32 @@
 
 	@media only screen and (max-width: @tablet){
 		.title.ml{
-			font-size:22px;
+			font-size:28px;
+			br{
+				display:none;
+			}
 		}
 		a{
-			font-size:12px;
+			font-size:14px;
 		}
 		a.button{
-			font-size:12px;
+			font-size:14px;
 			padding:20px 15px;
 		}
 	}
 	@media only screen and (max-width: @mobile){
 		.title.ml{
-			font-size:22px;
+			font-size:32px;
+			br{
+				display:none;
+			}
 		}
 		a{
-			font-size:12px;
+			font-size:14px;
 		}
 		a.button{
 			display:block;
-			font-size:12px;
+			font-size:14px;
 			padding:20px 15px;
 			max-width:300px;
 			margin:20px auto;
@@ -90,6 +107,62 @@
 			top:50%;
 			margin-top:-3px;
 			background-position:top left;
+		}
+	}
+}
+
+.splitScreen{
+	// "Select page case"
+	&.centered{
+		.row{
+			&.right,
+			&.left{
+				text-align:center;
+				padding:0 40px;
+				position:relative;
+				padding-bottom:120px;
+			}
+		}
+
+		.title.ml{
+			margin-bottom:50px;
+		}
+		p{
+			.helvetica(#23262b, 16px);
+			width:100%;
+			max-width:350px;
+			margin:0 auto 25px auto;
+			line-height:1.3;
+			strong{
+				font-weight:bold;
+			}
+		}
+
+		a.button{
+			position:absolute;
+			bottom:-10px;
+			left:50%;
+			width: 300px;
+			margin-left:-150px;
+		}
+
+		.list{
+			padding:30px 40px;
+			&.dots{
+				li{
+					list-style-type: none;
+					.helvetica(#23262b, 16px);
+					text-align:left;
+					margin-bottom:3px;
+					&:before{
+						content:'• ';
+						color:@red;
+					}
+				}
+			}
+			&.smaller{
+				margin-top:60px;
+			}
 		}
 	}
 }
