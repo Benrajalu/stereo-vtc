@@ -29,6 +29,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/editorial.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/editorial.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/FAQ.html.erb": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -43,6 +52,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/form.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/form2.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/form2.html.erb",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -223,6 +241,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/form\/dot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 948,
+		"inputAbbreviatedPath": "\/img\/form\/dot.png",
+		"outputAbbreviatedPath": "\/img\/form\/dot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/form\/dot2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 978,
+		"inputAbbreviatedPath": "\/img\/form\/dot2x.png",
+		"outputAbbreviatedPath": "\/img\/form\/dot2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/form\/parisOFF.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -322,17 +362,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/middleman.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 25282,
-		"inputAbbreviatedPath": "\/img\/middleman.png",
-		"outputAbbreviatedPath": "\/img\/middleman.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/plus.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -406,6 +435,61 @@
 		"initialSize": 15243,
 		"inputAbbreviatedPath": "\/img\/slides\/bubbles\/bubble2.jpg",
 		"outputAbbreviatedPath": "\/img\/slides\/bubbles\/bubble2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/CA.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5520,
+		"inputAbbreviatedPath": "\/img\/slides\/CA.png",
+		"outputAbbreviatedPath": "\/img\/slides\/CA.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/location.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5549,
+		"inputAbbreviatedPath": "\/img\/slides\/location.png",
+		"outputAbbreviatedPath": "\/img\/slides\/location.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/logoSmallXS.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3765,
+		"inputAbbreviatedPath": "\/img\/slides\/logoSmallXS.jpg",
+		"outputAbbreviatedPath": "\/img\/slides\/logoSmallXS.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/logoSmallXS.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5216,
+		"inputAbbreviatedPath": "\/img\/slides\/logoSmallXS.png",
+		"outputAbbreviatedPath": "\/img\/slides\/logoSmallXS.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/part.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5210,
+		"inputAbbreviatedPath": "\/img\/slides\/part.png",
+		"outputAbbreviatedPath": "\/img\/slides\/part.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -930,6 +1014,15 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
+		},
+	"\/select.html.erb": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/select.html.erb",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
