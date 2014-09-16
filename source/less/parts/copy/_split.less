@@ -66,6 +66,15 @@
 		background:url('../img/dottedLine.png') center center;
 		display:block;
 		z-index:9999;
+		@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dpi),
+		only screen and (                min-resolution: 2dppx) { 
+			background:url('../img/dottedLineX2.png') center center;
+			background-size: 5px 20px;
+		}
 	}
 
 	@media only screen and (max-width: @tablet){
@@ -107,7 +116,18 @@
 			left:0px;
 			top:50%;
 			margin-top:-3px;
-			background-position:top left;
+			background:url('../img/dottedLineH.png') center center;
+		}
+	}
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: @mobile) ,
+	only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: @mobile),
+	only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: @mobile),
+	only screen and (        min-device-pixel-ratio: 2) and (max-width: @mobile),
+	only screen and (                min-resolution: 192dpi) and (max-width: @mobile),
+	only screen and (                min-resolution: 2dppx) and (max-width: @mobile) { 
+		&::before{
+			background:url('../img/dottedLineHX2.png') center left repeat-x;
+			background-size: 20px 5px;
 		}
 	}
 }

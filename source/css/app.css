@@ -40,7 +40,7 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .rowFluid.textureBG {
-    background: url('../img/bgX2.jpg') ncenter center;
+    background: url('../img/bgX2.jpg') center center;
     background-size: 258px 150px;
   }
 }
@@ -3016,6 +3016,12 @@ html[xmlns] .flexslider .slides {
   display: block;
   z-index: 9999;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .splitScreen::before {
+    background: url('../img/dottedLineX2.png') center center;
+    background-size: 5px 20px;
+  }
+}
 @media only screen and (max-width: 960px) {
   .splitScreen .title.ml {
     font-size: 28px;
@@ -3054,7 +3060,13 @@ html[xmlns] .flexslider .slides {
     left: 0px;
     top: 50%;
     margin-top: -3px;
-    background-position: top left;
+    background: url('../img/dottedLineH.png') center center;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
+  .splitScreen::before {
+    background: url('../img/dottedLineHX2.png') center left repeat-x;
+    background-size: 20px 5px;
   }
 }
 .splitScreen.centered {
