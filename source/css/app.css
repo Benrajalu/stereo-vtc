@@ -1949,6 +1949,10 @@ html[xmlns] .flexslider .slides {
   .slideContent #bubbles img.bubble#face3 {
     position: static;
     margin: 0px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 173px;
   }
   .slideContent #bubbles img.bubble#face1.smaller,
   .slideContent #bubbles img.bubble#face4.smaller,
@@ -1957,6 +1961,35 @@ html[xmlns] .flexslider .slides {
     float: left;
     width: 45%;
     margin: 0px 2.5%;
+    max-width: 139px;
+    position: relative;
+    left: 0px;
+    right: 0px;
+  }
+  .slideContent #bubbles img.bubble#face1.smaller#face3,
+  .slideContent #bubbles img.bubble#face4.smaller#face3,
+  .slideContent #bubbles img.bubble#face2.smaller#face3,
+  .slideContent #bubbles img.bubble#face3.smaller#face3 {
+    float: right;
+    bottom: -10px;
+  }
+  .slideContent #bubbles img.bubble#face1.smaller#face2,
+  .slideContent #bubbles img.bubble#face4.smaller#face2,
+  .slideContent #bubbles img.bubble#face2.smaller#face2,
+  .slideContent #bubbles img.bubble#face3.smaller#face2 {
+    top: -10px;
+  }
+  .slideContent #bubbles img.bubble#face1,
+  .slideContent #bubbles img.bubble#face4 {
+    clear: both;
+    float: none;
+    position: relative;
+  }
+  .slideContent #bubbles img.bubble#face1 {
+    top: 10px;
+  }
+  .slideContent #bubbles img.bubble#face2 {
+    bottom: 10px;
   }
 }
 .slideContent.solo {
@@ -2918,7 +2951,7 @@ html[xmlns] .flexslider .slides {
   text-decoration: none;
   border-bottom: 1px solid #79839a;
   position: relative;
-  margin-left: 0;
+  margin-left: 0px;
   -webkit-transition: all 300ms ease-out;
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
