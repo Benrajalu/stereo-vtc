@@ -1601,7 +1601,7 @@ html[xmlns] .flexslider .slides {
   background-position: 0px 0px;
 }
 #mainSlider .flex-direction-nav .flex-prev:hover {
-  left: 3px;
+  left: -8px;
 }
 #mainSlider .flex-direction-nav .flex-next {
   right: 2px;
@@ -1609,7 +1609,7 @@ html[xmlns] .flexslider .slides {
   background-position: -24px 0px;
 }
 #mainSlider .flex-direction-nav .flex-next:hover {
-  right: 3px;
+  right: -8px;
 }
 @media only screen and (max-width: 690px) {
   #mainSlider .flex-direction-nav {
