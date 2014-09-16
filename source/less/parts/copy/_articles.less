@@ -48,6 +48,37 @@
 
 	&.centered{
 		text-align:center;
+		&.footer{
+			margin:40px 0px;
+			p{
+				margin-bottom: 5px;
+				font-size:16px;
+			}
+			a.button{
+				.inline-block();
+				.helvetica(@white, 16px);
+				text-decoration: none;
+				width:400px;
+				margin:25px auto 60px auto;
+				text-align:center;
+				padding:30px 40px;
+				color:@white;
+				text-transform: uppercase;
+				border:0px;
+				background:#737c90;
+				.border-radius(5px);
+				&:hover{
+					background:#3b4154;
+					color:@white;
+				}
+			}
+		}
+	}
+
+	&.intro{
+		padding:0px 60px;
+		font-size:16px;
+		margin-bottom:40px;
 	}
 
 	.title{
