@@ -198,7 +198,7 @@
 					.helvetica(@black, 16px);
 					list-style-type:none;
 					text-indent:-5px;
-					line-height:1.5;
+					line-height:1.2;
 					strong{
 						.helveticaBold(@black, 16px);
 					}
@@ -211,6 +211,9 @@
 				@media only screen and (max-width: @tablet){
 					li{
 						font-size:14px;
+						strong{
+							font-size: 14px;
+						}
 					}
 				}
 			}
@@ -385,7 +388,7 @@
 						position:absolute;
 						height:100%;
 						width:100%;
-						line-height:150px;
+						line-height:135px;
 						strong{
 							bottom:50%;
 							margin-bottom:-20px;
@@ -401,8 +404,85 @@
 				.roundVideo{
 					position:absolute;
 					bottom:auto;
-					top:-30px;
-					right:-30px;
+					top:-60px;
+					right:-60px;
+				}
+			}
+
+			@media only screen and (max-width: @tablet){
+				.columns.left{
+					img, p{
+						max-width:80%;
+					}
+					p{
+						margin:0px;
+					}
+					img{
+						margin:15px 0px;
+					}
+					.title{
+						font-size:19px;
+					}
+				}
+				.box{
+					max-width:100%;
+					margin-top:160px;
+					.left{
+						width:150px;
+						h2{
+							text-align:left;
+							padding-left:15px;
+							line-height:125px;
+							strong{
+								background:url('../img/logoSmallXS.jpg') center center no-repeat;
+							}
+						}
+					}
+					.right{
+						padding-left:155px;
+					}
+					.roundVideo{
+						top:-150px;
+						right:50%;
+						margin-right:-90px;
+					}
+				}
+			}
+
+			@media only screen and (max-width: @mobile){
+				padding:30px 20px;
+				.columns.left{
+					margin-bottom:30px;
+					p{
+						max-width: 100%;
+					}
+				}
+				.box{
+					margin-top:0px;
+					.left{
+						position:static;
+						height:auto;
+						width:100%;
+						h2{
+							.border-radius(10px 10px 0px 0px);
+							height:80px;
+							width:100%;
+							line-height:60px;
+							position:relative;
+							text-align:center;
+							padding:0px;
+							strong{
+								bottom:20px;
+								margin-bottom:0px;
+							}
+						}
+					}
+					.right{
+						padding:0px 20px;
+						.list{
+							margin-bottom:0px;
+						}
+					}
 				}
 			}
 		}

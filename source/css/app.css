@@ -1735,7 +1735,7 @@ html[xmlns] .flexslider .slides {
   font-size: 16px;
   list-style-type: none;
   text-indent: -5px;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 .slideContent .box .list li strong {
   font-family: sans-serif;
@@ -1750,6 +1750,9 @@ html[xmlns] .flexslider .slides {
 }
 @media only screen and (max-width: 960px) {
   .slideContent .box .list li {
+    font-size: 14px;
+  }
+  .slideContent .box .list li strong {
     font-size: 14px;
   }
 }
@@ -1979,7 +1982,7 @@ html[xmlns] .flexslider .slides {
   position: absolute;
   height: 100%;
   width: 100%;
-  line-height: 150px;
+  line-height: 135px;
 }
 .slideContent.solo .box .left h2 strong {
   bottom: 50%;
@@ -1994,8 +1997,89 @@ html[xmlns] .flexslider .slides {
 .slideContent.solo .box .roundVideo {
   position: absolute;
   bottom: auto;
-  top: -30px;
-  right: -30px;
+  top: -60px;
+  right: -60px;
+}
+@media only screen and (max-width: 960px) {
+  .slideContent.solo .columns.left img,
+  .slideContent.solo .columns.left p {
+    max-width: 80%;
+  }
+  .slideContent.solo .columns.left p {
+    margin: 0px;
+  }
+  .slideContent.solo .columns.left img {
+    margin: 15px 0px;
+  }
+  .slideContent.solo .columns.left .title {
+    font-size: 19px;
+  }
+  .slideContent.solo .box {
+    max-width: 100%;
+    margin-top: 160px;
+  }
+  .slideContent.solo .box .left {
+    width: 150px;
+  }
+  .slideContent.solo .box .left h2 {
+    text-align: left;
+    padding-left: 15px;
+    line-height: 125px;
+  }
+  .slideContent.solo .box .left h2 strong {
+    background: url('../img/logoSmallXS.jpg') center center no-repeat;
+  }
+  .slideContent.solo .box .right {
+    padding-left: 155px;
+  }
+  .slideContent.solo .box .roundVideo {
+    top: -150px;
+    right: 50%;
+    margin-right: -90px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .slideContent.solo {
+    padding: 30px 20px;
+  }
+  .slideContent.solo .columns.left {
+    margin-bottom: 30px;
+  }
+  .slideContent.solo .columns.left p {
+    max-width: 100%;
+  }
+  .slideContent.solo .box {
+    margin-top: 0px;
+  }
+  .slideContent.solo .box .left {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+  .slideContent.solo .box .left h2 {
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    height: 80px;
+    width: 100%;
+    line-height: 60px;
+    position: relative;
+    text-align: center;
+    padding: 0px;
+  }
+  .slideContent.solo .box .left h2 strong {
+    bottom: 20px;
+    margin-bottom: 0px;
+  }
+  .slideContent.solo .box .right {
+    padding: 0px 20px;
+  }
+  .slideContent.solo .box .right .list {
+    margin-bottom: 0px;
+  }
 }
 .flexslider {
   -webkit-transition: all 300ms ease-in-out;
@@ -3078,10 +3162,26 @@ html[xmlns] .flexslider .slides {
   background: #3b4154;
   color: #ffffff;
 }
+@media only screen and (max-width: 690px) {
+  .article.centered.footer {
+    padding: 0px 20px;
+  }
+  .article.centered.footer a.button {
+    width: 90%;
+    font-size: 14px;
+    padding: 20px 10px;
+    line-height: 1.4;
+  }
+}
 .article.intro {
   padding: 0px 60px;
   font-size: 16px;
   margin-bottom: 40px;
+}
+@media only screen and (max-width: 690px) {
+  .article.intro {
+    padding: 0 20px;
+  }
 }
 .article .title.xl {
   font-family: sans-serif;

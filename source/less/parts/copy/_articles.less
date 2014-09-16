@@ -72,6 +72,16 @@
 					color:@white;
 				}
 			}
+
+			@media only screen and (max-width:@mobile){
+				padding:0px 20px;
+				a.button{
+					width:90%;
+					font-size:14px;
+					padding:20px 10px;
+					line-height:1.4;
+				}
+			}
 		}
 	}
 
@@ -79,6 +89,9 @@
 		padding:0px 60px;
 		font-size:16px;
 		margin-bottom:40px;
+		@media only screen and (max-width:@mobile){
+			padding:0 20px;
+		}
 	}
 
 	.title{
