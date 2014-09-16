@@ -65,6 +65,7 @@
 		margin-left:-2.5px;
 		background:url('../img/dottedLine.png') center center;
 		display:block;
+		z-index:9999;
 	}
 
 	@media only screen and (max-width: @tablet){
@@ -114,13 +115,53 @@
 .splitScreen{
 	// "Select page case"
 	&.centered{
+		display:table;
+		width:100%;
+		table-layout:fixed;
+		.columns{
+			float:none;
+			width:50%;
+			display:table-cell;
+			vertical-align: top;
+			position: relative;
+		}
 		.row{
 			&.right,
 			&.left{
 				text-align:center;
 				padding:0 40px;
-				position:relative;
+				position:static;
 				padding-bottom:120px;
+			}
+			&.left{
+				a.button{
+					left:auto;
+					right:100px;
+				}
+			}
+
+			&.right{
+				a.button{
+					right:auto;
+					left:100px;
+				}
+			}
+
+			@media only screen and (max-width:@tablet){
+				&.left{
+					padding:0 20px 120px 20px;
+					a.button{
+						right:50%;
+						margin-right:-150px;
+					}
+				}
+				&.right{
+					padding:0 20px 120px 20px;
+					a.button{
+						left:50%;
+						margin-left:-150px;
+					}
+				}
 			}
 		}
 
@@ -140,10 +181,9 @@
 
 		a.button{
 			position:absolute;
-			bottom:-10px;
+			bottom:70px;
 			left:50%;
 			width: 300px;
-			margin-left:-150px;
 		}
 
 		.list{
@@ -154,15 +194,136 @@
 					.helvetica(#23262b, 16px);
 					text-align:left;
 					margin-bottom:3px;
+					padding-left:5px;
+					position:relative;
 					&:before{
 						content:'• ';
 						color:@red;
+						position:absolute;
+						left:-5px;
 					}
 				}
 			}
 			&.smaller{
 				margin-top:60px;
 			}
+			@media only screen and (max-width:@tablet){
+				padding:20px 20px;
+				&.smaller{
+					margin-top:30px;
+				}
+			}
 		}
+
+		@media only screen and (max-width:@mobile){
+			display:block;
+			>.columns{
+				width:100%;
+				float:none;
+				padding:0px;
+				display:block;
+			}
+			.row{
+				float:none;
+				width:100%;
+				&.right{
+					display:none;
+				}
+				.columns{
+					display:block;
+				}
+				&.left, &.right{
+					padding:20px;	
+					a.button{
+						position:static;
+						display:block;
+						margin:0 auto 40px auto;
+					}
+				}
+			}
+			
+			.title.ml{
+				margin-bottom:30px;
+			}
+
+			.list{
+				padding:0 15px;
+				margin-bottom:20px;
+				&.smaller{
+					margin-top:0px;
+				}
+			}
+
+			&::before{
+				display:none;
+			}
+
+			&.eco{
+				.row{
+					&.left{
+						display:none;
+					}
+					&.right{
+						display:block;
+						width:100%;
+					}
+				}
+			}	
+		}
+	}
+}
+
+#halfSwitch{
+	display:none;
+	margin:20px 0px;
+	position: relative;
+	.clearfix();
+	.left,.right{
+		float:left;
+		width:50%;
+		a{
+			.helvetica(@blackText, 14px);
+			text-decoration:none;
+			display:block;
+			line-height:24px;
+		}
+	}
+	.left{
+		text-align:right;
+		a{
+			padding-right:35px;
+			background:url('../img/pillL.png') center right no-repeat;
+		}
+	}
+	.right{
+		text-align:left;
+		a{
+			padding-left:35px;
+			background:url('../img/pillR.png') center left no-repeat;
+		}
+	}
+	>ul{
+		&::before{
+			content:' ';
+			display:block;
+			height:30px;
+			width:30px;
+			background:@blue;
+			.border-radius(999px);
+			border:2px solid @grey;
+			position:absolute;
+			top:-3px;
+			left:50%;
+			margin-left:-30px;
+			.transition(all 200ms ease-in-out);
+		}
+		&.eco{
+			&::before{
+				margin-left:0px;
+			}
+		}
+	}
+	@media only screen and (max-width:@mobile){
+		display:block;
 	}
 }

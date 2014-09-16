@@ -90,21 +90,22 @@ $(window).load(function () {
 			})
 		})
 
-	// Splitscreen even
-		var tieScreens = function(){
-			var row = $(".splitScreen.centered"),
-				leftHeight =row.find('.row.left').outerHeight(),
-				rightHeight = row.find('.row.right').outerHeight();
+	// Splitscreen toggle
+		$("#halfSwitch a").click(function(event){
+			event.preventDefault;
+			var cl = $(this).attr("data-target"),
+				par = $("#halfSwitch").find('ul'),
+				tar = $(".rowFluid.splitScreen");
 
-			if(leftHeight > rightHeight){
-				$(row).find('.row.right').outerHeight(leftHeight);
+			switch(cl){
+				case 'berline':
+					par.removeClass("eco").addClass("berline");
+					tar.removeClass("eco").addClass("berline");
+					break;
+				case 'eco':
+					par.removeClass("berline").addClass("eco");
+					tar.removeClass("berline").addClass("eco");
+					break;
 			}
-			else{
-				$(row).find('.row.left').outerHeight(rightHeight);
-			}
-		}
-		tieScreens();
-		$(window).resize(function(){
-			tieScreens();
 		})
 });

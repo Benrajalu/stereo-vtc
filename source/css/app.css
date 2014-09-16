@@ -1624,6 +1624,28 @@ html[xmlns] .flexslider .slides {
     padding: 0px 20px;
   }
 }
+.flexslider {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all all 300ms ease-in-out ease;
+  -moz-transition: all all 300ms ease-in-out ease;
+  -ms-transition: all all 300ms ease-in-out ease;
+  -o-transition: all all 300ms ease-in-out ease;
+  transition: all all 300ms ease-in-out ease;
+  background: url("../img/loading.gif") center center no-repeat;
+  min-height: 300px;
+}
+.flexslider .slides {
+  display: none;
+}
+.flexslider.ready {
+  background: transparent;
+}
+.flexslider.ready .slides {
+  display: block;
+}
 .slideContent {
   padding: 75px 0px;
 }
@@ -2080,28 +2102,6 @@ html[xmlns] .flexslider .slides {
   .slideContent.solo .box .right .list {
     margin-bottom: 0px;
   }
-}
-.flexslider {
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
-  background: url("../img/loading.gif") center center no-repeat;
-  min-height: 300px;
-}
-.flexslider .slides {
-  display: none;
-}
-.flexslider.ready {
-  background: transparent;
-}
-.flexslider.ready .slides {
-  display: block;
 }
 .roundVideo {
   width: 180px;
@@ -2972,6 +2972,7 @@ html[xmlns] .flexslider .slides {
   margin-left: -2.5px;
   background: url('../img/dottedLine.png') center center;
   display: block;
+  z-index: 9999;
 }
 @media only screen and (max-width: 960px) {
   .splitScreen .title.ml {
@@ -3014,12 +3015,48 @@ html[xmlns] .flexslider .slides {
     background-position: top left;
   }
 }
+.splitScreen.centered {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.splitScreen.centered .columns {
+  float: none;
+  width: 50%;
+  display: table-cell;
+  vertical-align: top;
+  position: relative;
+}
 .splitScreen.centered .row.right,
 .splitScreen.centered .row.left {
   text-align: center;
   padding: 0 40px;
-  position: relative;
+  position: static;
   padding-bottom: 120px;
+}
+.splitScreen.centered .row.left a.button {
+  left: auto;
+  right: 100px;
+}
+.splitScreen.centered .row.right a.button {
+  right: auto;
+  left: 100px;
+}
+@media only screen and (max-width: 960px) {
+  .splitScreen.centered .row.left {
+    padding: 0 20px 120px 20px;
+  }
+  .splitScreen.centered .row.left a.button {
+    right: 50%;
+    margin-right: -150px;
+  }
+  .splitScreen.centered .row.right {
+    padding: 0 20px 120px 20px;
+  }
+  .splitScreen.centered .row.right a.button {
+    left: 50%;
+    margin-left: -150px;
+  }
 }
 .splitScreen.centered .title.ml {
   margin-bottom: 50px;
@@ -3039,10 +3076,9 @@ html[xmlns] .flexslider .slides {
 }
 .splitScreen.centered a.button {
   position: absolute;
-  bottom: -10px;
+  bottom: 70px;
   left: 50%;
   width: 300px;
-  margin-left: -150px;
 }
 .splitScreen.centered .list {
   padding: 30px 40px;
@@ -3055,13 +3091,156 @@ html[xmlns] .flexslider .slides {
   font-size: 16px;
   text-align: left;
   margin-bottom: 3px;
+  padding-left: 5px;
+  position: relative;
 }
 .splitScreen.centered .list.dots li:before {
   content: '• ';
   color: #ae2d2b;
+  position: absolute;
+  left: -5px;
 }
 .splitScreen.centered .list.smaller {
   margin-top: 60px;
+}
+@media only screen and (max-width: 960px) {
+  .splitScreen.centered .list {
+    padding: 20px 20px;
+  }
+  .splitScreen.centered .list.smaller {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .splitScreen.centered {
+    display: block;
+  }
+  .splitScreen.centered > .columns {
+    width: 100%;
+    float: none;
+    padding: 0px;
+    display: block;
+  }
+  .splitScreen.centered .row {
+    float: none;
+    width: 100%;
+  }
+  .splitScreen.centered .row.right {
+    display: none;
+  }
+  .splitScreen.centered .row .columns {
+    display: block;
+  }
+  .splitScreen.centered .row.left,
+  .splitScreen.centered .row.right {
+    padding: 20px;
+  }
+  .splitScreen.centered .row.left a.button,
+  .splitScreen.centered .row.right a.button {
+    position: static;
+    display: block;
+    margin: 0 auto 40px auto;
+  }
+  .splitScreen.centered .title.ml {
+    margin-bottom: 30px;
+  }
+  .splitScreen.centered .list {
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+  .splitScreen.centered .list.smaller {
+    margin-top: 0px;
+  }
+  .splitScreen.centered::before {
+    display: none;
+  }
+  .splitScreen.centered.eco .row.left {
+    display: none;
+  }
+  .splitScreen.centered.eco .row.right {
+    display: block;
+    width: 100%;
+  }
+}
+#halfSwitch {
+  display: none;
+  margin: 20px 0px;
+  position: relative;
+  *zoom: 1;
+}
+#halfSwitch:before,
+#halfSwitch:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+#halfSwitch:after {
+  clear: both;
+}
+#halfSwitch .left,
+#halfSwitch .right {
+  float: left;
+  width: 50%;
+}
+#halfSwitch .left a,
+#halfSwitch .right a {
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #23262b;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  line-height: 24px;
+}
+#halfSwitch .left {
+  text-align: right;
+}
+#halfSwitch .left a {
+  padding-right: 35px;
+  background: url('../img/pillL.png') center right no-repeat;
+}
+#halfSwitch .right {
+  text-align: left;
+}
+#halfSwitch .right a {
+  padding-left: 35px;
+  background: url('../img/pillR.png') center left no-repeat;
+}
+#halfSwitch > ul::before {
+  content: ' ';
+  display: block;
+  height: 30px;
+  width: 30px;
+  background: #858fa6;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  border: 2px solid #f3f3f3;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  margin-left: -30px;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
+}
+#halfSwitch > ul.eco::before {
+  margin-left: 0px;
+}
+@media only screen and (max-width: 690px) {
+  #halfSwitch {
+    display: block;
+  }
 }
 .regularCopy {
   font-family: sans-serif;
