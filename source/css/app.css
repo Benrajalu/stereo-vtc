@@ -1102,7 +1102,7 @@ html[xmlns] .flexslider .slides {
   vertical-align: middle;
   width: 259px;
   height: 81px;
-  background: url('../img/logocp.jpg') center center no-repeat;
+  background: url('../img/logocp.png') center center no-repeat;
   overflow: hidden;
   text-indent: -9999px;
   -webkit-transition: all 300ms ease-in-out;
@@ -1114,6 +1114,12 @@ html[xmlns] .flexslider .slides {
   -ms-transition: all all 300ms ease-in-out ease;
   -o-transition: all all 300ms ease-in-out ease;
   transition: all all 300ms ease-in-out ease;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #topNav #logo {
+    background: url('../img/logocpX2.png') center center no-repeat;
+    background-size: 259px 29px;
+  }
 }
 #topNav #threeLines {
   display: none;
@@ -1164,7 +1170,7 @@ html[xmlns] .flexslider .slides {
     display: block;
     position: absolute;
     left: 10px;
-    background: url('../img/logocpSmall.jpg') center left no-repeat;
+    background: url('../img/logocpSmall.png') center left no-repeat;
   }
   #topNav #menuContents {
     right: auto;
@@ -1306,7 +1312,7 @@ html[xmlns] .flexslider .slides {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
   #topNav #logo {
-    background: url('../img/logocp.jpg') center left no-repeat;
+    background: url('../img/logocpSmallX2.png') center left no-repeat;
     background-size: 150px 19px;
   }
 }
@@ -1753,7 +1759,24 @@ html[xmlns] .flexslider .slides {
   height: 19px;
   overflow: hidden;
   text-indent: -9999px;
-  background: url("../img/logoSmall.jpg") center center no-repeat;
+  background: url("../img/logoSmall.png") center center no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .slideContent .box h2 strong {
+    background: url("../img/logoSmallX2.png") center center no-repeat;
+    background-size: 194px 22px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .slideContent .box h2 strong {
+    background: url("../img/logoSmallXS.png") center center no-repeat;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
+  .slideContent .box h2 strong .box .left strong {
+    background: url('../img/logoSmallXSx2.png') center center no-repeat;
+    background-size: 140px 16px;
+  }
 }
 .slideContent .box .list {
   padding: 30px 25px 0px 25px;
@@ -2091,7 +2114,7 @@ html[xmlns] .flexslider .slides {
     line-height: 125px;
   }
   .slideContent.solo .box .left h2 strong {
-    background: url('../img/logoSmallXS.jpg') center center no-repeat;
+    background: url('../img/logoSmallXS.png') center center no-repeat;
   }
   .slideContent.solo .box .right {
     padding-left: 155px;
@@ -2100,6 +2123,12 @@ html[xmlns] .flexslider .slides {
     top: -150px;
     right: 50%;
     margin-right: -90px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 960px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 960px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 960px), only screen and (min-device-pixel-ratio: 2) and (max-width: 960px), only screen and (min-resolution: 192dpi) and (max-width: 960px), only screen and (min-resolution: 2dppx) and (max-width: 960px) {
+  .slideContent.solo .box .left strong {
+    background: url('../img/logoSmallXSx2.png') center center no-repeat;
+    background-size: 140px 16px;
   }
 }
 @media only screen and (max-width: 690px) {

@@ -8,10 +8,19 @@
 		vertical-align: middle;
 		width:259px;
 		height:81px;
-		background:url('../img/logocp.jpg') center center no-repeat;
+		background:url('../img/logocp.png') center center no-repeat;
 		overflow:hidden;
 		text-indent:-9999px;
 		.transition(all 300ms ease-in-out);
+		@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dpi),
+		only screen and (                min-resolution: 2dppx) { 
+			background:url('../img/logocpX2.png') center center no-repeat;
+			background-size: 259px 29px;
+		}
 	}
 	
 	#threeLines{
@@ -55,7 +64,7 @@
 			display:block;
 			position: absolute;
 			left:10px;
-			background:url('../img/logocpSmall.jpg') center left no-repeat;
+			background:url('../img/logocpSmall.png') center left no-repeat;
 		}
 
 		#menuContents{
@@ -158,7 +167,7 @@
 	only screen and (                min-resolution: 192dpi) and (max-width: @mobile),
 	only screen and (                min-resolution: 2dppx) and (max-width: @mobile) { 
 		#logo{
-			background:url('../img/logocp.jpg') center left no-repeat;
+			background:url('../img/logocpSmallX2.png') center left no-repeat;
 			background-size: 150px 19px;
 		}
 	}

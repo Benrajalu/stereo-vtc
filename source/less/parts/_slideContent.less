@@ -66,7 +66,31 @@
 				height:19px;
 				overflow: hidden;
 				text-indent:-9999px;
-				background:url("../img/logoSmall.jpg") center center no-repeat;
+				background:url("../img/logoSmall.png") center center no-repeat;
+				@media only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (   min--moz-device-pixel-ratio: 2),
+				only screen and (     -o-min-device-pixel-ratio: 2/1),
+				only screen and (        min-device-pixel-ratio: 2),
+				only screen and (                min-resolution: 192dpi),
+				only screen and (                min-resolution: 2dppx) { 
+					background:url("../img/logoSmallX2.png") center center no-repeat;
+					background-size: 194px 22px;
+				}
+				@media only screen and (max-width:@mobile){
+					background:url("../img/logoSmallXS.png") center center no-repeat;
+				}
+				@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: @mobile),
+				only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: @mobile),
+				only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: @mobile),
+				only screen and (        min-device-pixel-ratio: 2) and (max-width: @mobile),
+				only screen and (                min-resolution: 192dpi) and (max-width: @mobile),
+				only screen and (                min-resolution: 2dppx) and (max-width: @mobile){ 
+					.box .left strong{
+						background:url('../img/logoSmallXSx2.png') center center no-repeat;
+						background-size:140px 16px;
+					}
+				}	
+
 			}
 		}
 
@@ -339,7 +363,7 @@
 						padding-left:15px;
 						line-height:125px;
 						strong{
-							background:url('../img/logoSmallXS.jpg') center center no-repeat;
+							background:url('../img/logoSmallXS.png') center center no-repeat;
 						}
 					}
 				}
@@ -351,6 +375,17 @@
 					right:50%;
 					margin-right:-90px;
 				}
+			}
+		}
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: @tablet),
+		only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: @tablet),
+		only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: @tablet),
+		only screen and (        min-device-pixel-ratio: 2) and (max-width: @tablet),
+		only screen and (                min-resolution: 192dpi) and (max-width: @tablet),
+		only screen and (                min-resolution: 2dppx) and (max-width: @tablet){ 
+			.box .left strong{
+				background:url('../img/logoSmallXSx2.png') center center no-repeat;
+				background-size:140px 16px;
 			}
 		}
 
