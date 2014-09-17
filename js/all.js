@@ -26,6 +26,7 @@ $(window).load(function () {
 	// Slider
 		$(".flexslider").addClass("ready");
 		$("#mainSlider").flexslider({
+			itemMargin: 300,
 			slideshow:true,
 			video: true,
 			touch: true,
@@ -126,5 +127,51 @@ $(window).load(function () {
 			}
 		})
 
+	// Animation
+
+		function setAnimHome(){
+
+		///animation enchainées
+		var tl = new TimelineMax({delay:0.5, repeat:0,  onComplete:tlFinished});
+
+			setbg($('.animation-chauffeur .chauffeur'));
+			tl.from($('.animation-chauffeur .chauffeur'), 0.8, {opacity:0, onComplete:setbg,onCompleteParams:[$('.animation-chauffeur .costar')] })
+				.from($('.animation-chauffeur .costar'), 0.8, {delay:1.5,opacity:0, onComplete:setbg,onCompleteParams:[$('.animation-chauffeur .voiture')] })
+				.from($('.animation-chauffeur .voiture'), 0.8, {delay:1.5,opacity:0, onComplete:setbg,onCompleteParams:[$('.animation-chauffeur .billey')] })
+				.from($('.animation-chauffeur .billey'), 0.8, {delay:1.5,opacity:0 })
+				.to($('.animation-chauffeur .billey'), 2, {opacity:1 });//tweenbidon pour ajouter un délai
+			
+			}
+
+		function tlFinished(){
+			//une fois l'animation complétée, ajout de la boucle sur le bg billey
+			$('.animation-chauffeur .billey').removeClass("active-elmnt");
+			$('.animation-chauffeur .billey').addClass("active-elmntb");
+		}
+
+
+		function setbg(elmnt) {
+			elmnt.addClass("active-elmnt");
+		}
+
+		function setBerline(){
+
+		TweenMax.from($(".animation-berline .voiture"), 0.8, {marginTop:70,marginLeft:0,delay:0.2,opacity:0 });
+
+		TweenMax.from($(".animation-berline .pin"),1, {marginTop:70,delay:0.3,opacity:0, ease:Bounce.easeOut});
+
+		}
+
+		function setEco(){
+
+		TweenMax.from($(".animation-eco .voiture"), 0.8, {marginTop:90,marginLeft:120,delay:0.2,opacity:0 });
+
+		TweenMax.from($(".animation-eco .pin"),1, {marginTop:70,delay:0.3,opacity:0, ease:Bounce.easeOut});
+
+		}
+
+		setAnimHome();
+		setBerline();
+		setEco();
 	
 });
