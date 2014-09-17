@@ -26,7 +26,7 @@ $(window).load(function () {
 		$(".flexslider").addClass("ready");
 		$("#mainSlider").flexslider({
 			itemMargin: 300,
-			slideshow:true,
+			slideshow:false,
 			animationLoop: false,
 			video: true,
 			touch: true,
