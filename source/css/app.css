@@ -1,3 +1,7 @@
+html,
+body {
+  padding-bottom: 40px;
+}
 .row {
   width: 100%;
   max-width: 960px;
@@ -3681,7 +3685,7 @@ html[xmlns] .flexslider .slides {
   color: #363636;
   font-size: 18px;
   text-decoration: none;
-  padding-left: 10px;
+  padding-left: 15px;
   position: relative;
 }
 .dropdown dt a::before {
