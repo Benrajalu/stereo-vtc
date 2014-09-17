@@ -29,7 +29,7 @@ $(window).load(function () {
 			itemMargin: 300,
 			slideshow:false,
 			animationLoop: false,
-			video: true,
+			video: false,
 			touch: true,
 			controlNav: true, 
 			smoothHeight:true,

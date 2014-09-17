@@ -44,6 +44,11 @@
     background-size: 258px 150px;
   }
 }
+@media only screen and (max-width: 690px) {
+  .rowFluid.textureBG {
+    background: #ffffff;
+  }
+}
 .rowFluid.greyBG {
   background: #f3f3f3;
 }
@@ -1133,7 +1138,8 @@ html[xmlns] .flexslider .slides {
 }
 @media only screen and (max-width: 690px) {
   .animation-chauffeur {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 200px;
     margin: 20px auto auto;
     position: relative;
@@ -1431,12 +1437,16 @@ html[xmlns] .flexslider .slides {
   white-space: nowrap;
 }
 #sliderNav ul li {
-  float: left;
+  float: none;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
   width: 20%;
   min-width: 100px;
   border-right: 2px solid #ececec;
   height: 83px;
   line-height: 83px;
+  margin-left: -0.25em;
 }
 #sliderNav ul li:first-child {
   border-left: 2px solid #ececec;
@@ -1618,9 +1628,6 @@ html[xmlns] .flexslider .slides {
     top: 0px;
   }
 }
-#mainSlider {
-  padding: 0px 50px;
-}
 #mainSlider .slides > li.madeInFrance {
   position: relative;
   overflow: hidden;
@@ -1730,12 +1737,15 @@ html[xmlns] .flexslider .slides {
     height: auto;
   }
   #mainSlider .slides > li > .slideContent {
-    padding: 50px 0px;
+    padding: 50px 30px;
   }
 }
 @media only screen and (max-width: 690px) {
-  #mainSlider {
-    padding: 0px 20px;
+  #mainSlider .slides {
+    height: auto;
+  }
+  #mainSlider .slides > li > .slideContent {
+    padding: 50px 20px;
   }
 }
 .flexslider {
@@ -1760,7 +1770,7 @@ html[xmlns] .flexslider .slides {
   display: block;
 }
 .slideContent {
-  padding: 75px 0px;
+  padding: 75px 50px;
 }
 .slideContent .title {
   font-family: sans-serif;
@@ -1773,6 +1783,11 @@ html[xmlns] .flexslider .slides {
 @media only screen and (max-width: 960px) {
   .slideContent .title {
     font-size: 26px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .slideContent .title {
+    text-align: center;
   }
 }
 .slideContent p {
@@ -1799,6 +1814,11 @@ html[xmlns] .flexslider .slides {
   }
   .slideContent p strong {
     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .slideContent p {
+    text-align: center;
   }
 }
 .slideContent .box {
