@@ -5,13 +5,16 @@
 	position:relative;
 	ul{
 		height:83px;
+		white-space: nowrap;
 		li{
-			float:left;
+			float:none;
+			.inline-block();
 			width:20%;
 			min-width:100px;
 			border-right:2px solid #ececec;
 			height:83px;
 			line-height:83px;
+			margin-left:-0.25em;
 			&:first-child{
 				border-left:2px solid #ececec;
 			}
@@ -31,7 +34,7 @@
 					position:relative;
 					.transition(all 300ms ease-out);	
 				}
-				&::before{
+				&:before{
 					content: "";
 					display:block;
 					height:3px;
@@ -44,7 +47,7 @@
 					.transition(all 200ms ease-in-out);
 					z-index:99;
 				}
-				&::after{
+				&:after{
 					content: "";
 					display:block;
 					height:13px;
@@ -61,7 +64,7 @@
 				// Sprites
 
 					&.eco span, &.team span, &.freedom span, &.transparent span, &.pro span{
-						&::before{
+						&:before{
 							content: " ";
 							display:block;
 							width:33px;
@@ -79,14 +82,14 @@
 
 					
 					&:hover span, &.flex-active span{
-						&::before{
+						&:before{
 							background-image:url('../img/sliderSpriteActive.png');
 						}
 					}
 
 					&.eco{
 						span{
-							&::before{
+							&:before{
 								background-position:0px 0px;
 							}
 						}
@@ -94,7 +97,7 @@
 
 					&.team{
 						span{
-							&::before{
+							&:before{
 								background-position:-33px 0px;
 							}
 						}
@@ -102,7 +105,7 @@
 
 					&.freedom{
 						span{
-							&::before{
+							&:before{
 								background-position:-66px 0px;
 							}
 						}
@@ -110,7 +113,7 @@
 
 					&.transparent{
 						span{
-							&::before{
+							&:before{
 								background-position:-99px 0px;
 							}
 						}
@@ -118,7 +121,7 @@
 
 					&.pro{
 						span{
-							&::before{
+							&:before{
 								background-position:-132px 0px;
 							}
 						}
@@ -134,11 +137,11 @@
 					span{
 						color:#000000;
 					}
-					&::before{
+					&:before{
 						top:-3px;
 						opacity:1;
 					}
-					&::after{
+					&:after{
 						bottom:-13px;
 						opacity:1;
 					}
@@ -167,14 +170,14 @@
 					margin-left:0px;
 				}
 				a{
-					&::before{
+					&:before{
 						top:-3px;
 					}
-					&::after{
+					&:after{
 						display:none;
 					}
 					&.flex-active{
-						&::before{
+						&:before{
 							top:0px;
 						}
 					}

@@ -9,6 +9,9 @@
 		@media only screen and (max-width: @tablet){
 			font-size:26px;
 		}
+		@media only screen and (max-width: @mobile){
+			text-align: center;
+		}
 	}
 	p{
 		.helvetica(@white, 16px);
@@ -26,6 +29,9 @@
 			strong{
 				font-size:14px;
 			}
+		}
+		@media only screen and (max-width: @mobile){
+			text-align: center;
 		}
 	}
 
@@ -98,14 +104,14 @@
 			padding:30px 25px 0px 25px;
 			list-style-position:inside;
 			li{
-				.helvetica(@black, 16px);
+				.helvetica(@fontColor, 16px);
 				list-style-type:none;
 				text-indent:-5px;
 				line-height:1.2;
 				strong{
-					.helveticaBold(@black, 16px);
+					.helveticaBold(@fontColor, 16px);
 				}
-				&::before{
+				&:before{
 					content:"-";
 					position:relative;
 					left:-5px;
@@ -147,7 +153,7 @@
 		    margin:0px;
 		    margin-bottom:10px;
 		    position:relative;
-			&::before{
+			&:before{
 				content:" ";
 				position:absolute;
 				left:-8px;

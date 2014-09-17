@@ -11,7 +11,7 @@
 	}
 
 	.title.ml{
-		.helveticaBold(#23262b, 33px);
+		.helveticaBold(@fontColor, 33px);
 		line-height:1.2;
 		letter-spacing:-1px;
 	}
@@ -22,7 +22,7 @@
 		position:relative;
 		margin-left:0px;
 		.transition(all 300ms ease-out);
-		&::before{
+		&:before{
 			content:"› ";
 			position:absolute;
 			left:-10px;
@@ -47,7 +47,7 @@
 				background:#3b4154;
 				color:@white;
 			}
-			&::before{
+			&:before{
 				display:none;
 			}
 		}
@@ -56,7 +56,7 @@
 	img{
 		max-width:100%;
 	}
-	&::before{
+	&:before{
 		content:'';
 		width:5px;
 		height:100%;
@@ -111,13 +111,21 @@
 			margin:20px auto;
 		}
 
-		&::before{
-			height:6px;
-			width:100%;
-			left:0px;
-			top:50%;
-			margin-top:-3px;
-			background:url('../img/dottedLineH.png') center center;
+		&:before{
+			display:none;
+		}
+		.columns.left{
+			position:relative;
+			&:after{
+				position: absolute;
+				display:block;
+				content:' ';
+				height:6px;
+				width:100%;
+				left:0px;
+				bottom:-3px;
+				background:url('../img/dottedLineH.png') top left repeat-x;	
+			}
 		}
 	}
 	@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: @mobile) ,
@@ -126,7 +134,7 @@
 	only screen and (        min-device-pixel-ratio: 2) and (max-width: @mobile),
 	only screen and (                min-resolution: 192dpi) and (max-width: @mobile),
 	only screen and (                min-resolution: 2dppx) and (max-width: @mobile) { 
-		&::before{
+		&:before{
 			background:url('../img/dottedLineHX2.png') center left repeat-x;
 			background-size: 20px 5px;
 		}
@@ -190,7 +198,7 @@
 			margin-bottom:50px;
 		}
 		p{
-			.helvetica(#23262b, 16px);
+			.helvetica(@fontColor, 16px);
 			width:100%;
 			max-width:350px;
 			margin:0 auto 25px auto;
@@ -212,7 +220,7 @@
 			&.dots{
 				li{
 					list-style-type: none;
-					.helvetica(#23262b, 16px);
+					.helvetica(@fontColor, 16px);
 					text-align:left;
 					margin-bottom:3px;
 					padding-left:5px;
@@ -275,7 +283,7 @@
 				}
 			}
 
-			&::before{
+			&:before{
 				display:none;
 			}
 
@@ -324,7 +332,7 @@
 		}
 	}
 	>ul{
-		&::before{
+		&:before{
 			content:' ';
 			display:block;
 			height:30px;
@@ -339,7 +347,7 @@
 			.transition(all 200ms ease-in-out);
 		}
 		&.eco{
-			&::before{
+			&:before{
 				margin-left:0px;
 			}
 		}

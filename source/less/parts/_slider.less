@@ -6,7 +6,7 @@
 				&.madeInFrance{
 					position:relative;
 					overflow: hidden;
-					&::before{
+					&:before{
 						content:' ';
 						display:block;
 						position:absolute;
@@ -20,7 +20,7 @@
 						.transition-delay(800ms);
 					}
 					&.flex-active-slide{
-						&::before{
+						&:before{
 							top:0px;
 							opacity:1;
 							@media only screen and (max-width: @tablet){
@@ -117,7 +117,7 @@
 				height:auto;
 				>li{
 					>.slideContent{
-						padding:30px 20px;
+						padding:50px 20px;
 					}
 				}
 			}

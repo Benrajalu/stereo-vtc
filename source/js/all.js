@@ -25,7 +25,6 @@ $(window).load(function () {
 	// Slider
 		$(".flexslider").addClass("ready");
 		$("#mainSlider").flexslider({
-			itemMargin: 300,
 			slideshow:true,
 			animationLoop: false,
 			video: false,
@@ -37,11 +36,15 @@ $(window).load(function () {
 			manualControls: "#sliderNav li a",
 			start: function(){
 				muteAll();
-				muteSlider();
+				$("#sliderNav a").click(function(){
+				 	$("#mainSlider").flexslider("stop");
+				});
+				$("#flex-direction-nav a").click(function(){
+				 	$("#mainSlider").flexslider("stop");
+				});
 			}, 
 			after: function(){
 				muteAll();
-				muteSlider();
 			}
 		});
 
