@@ -41,7 +41,7 @@
 					top:-0px;
 					left:0px;
 					opacity:0;
-					.transition(all 300ms ease-in-out);
+					.transition(all 200ms ease-in-out);
 					z-index:99;
 				}
 				&::after{
@@ -54,7 +54,7 @@
 					bottom:-3px;
 					left:0px;
 					opacity:0;
-					.transition(all 300ms ease-in-out);
+					.transition(all 200ms ease-in-out);
 					z-index:99;
 				}
 
@@ -73,6 +73,14 @@
 							background-image:url('../img/sliderSprite.png');
 							background-repeat:no-repeat;
 							overflow:hidden;
+							.transition(all 200ms ease-in-out);
+						}
+					}
+
+					
+					&:hover span, &.flex-active span{
+						&::before{
+							background-image:url('../img/sliderSpriteActive.png');
 						}
 					}
 
@@ -80,12 +88,6 @@
 						span{
 							&::before{
 								background-position:0px 0px;
-							}
-						}
-
-						&:hover span, &.flex-active span{
-							&::before{
-								background-position: 0px -33px;
 							}
 						}
 					}
@@ -96,22 +98,12 @@
 								background-position:-33px 0px;
 							}
 						}
-						&:hover span, &.flex-active span{
-							&::before{
-								background-position: -33px -33px;
-							}
-						}
 					}
 
 					&.freedom{
 						span{
 							&::before{
 								background-position:-66px 0px;
-							}
-						}
-						&:hover span, &.flex-active span{
-							&::before{
-								background-position: -66px -33px;
 							}
 						}
 					}
@@ -122,22 +114,12 @@
 								background-position:-99px 0px;
 							}
 						}
-						&:hover span, &.flex-active span{
-							&::before{
-								background-position: -99px -33px;
-							}
-						}
 					}
 
 					&.pro{
 						span{
 							&::before{
 								background-position:-132px 0px;
-							}
-						}
-						&:hover span, &.flex-active span{
-							&::before{
-								background-position: -132px -34px;
 							}
 						}
 					}
