@@ -44,6 +44,11 @@
     background-size: 258px 150px;
   }
 }
+@media only screen and (max-width: 690px) {
+  .rowFluid.textureBG {
+    background: #ffffff;
+  }
+}
 .rowFluid.greyBG {
   background: #f3f3f3;
 }
