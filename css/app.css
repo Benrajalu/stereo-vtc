@@ -1623,9 +1623,6 @@ html[xmlns] .flexslider .slides {
     top: 0px;
   }
 }
-#mainSlider {
-  padding: 0px 50px;
-}
 #mainSlider .slides > li.madeInFrance {
   position: relative;
   overflow: hidden;
@@ -1735,12 +1732,15 @@ html[xmlns] .flexslider .slides {
     height: auto;
   }
   #mainSlider .slides > li > .slideContent {
-    padding: 50px 0px;
+    padding: 50px 30px;
   }
 }
 @media only screen and (max-width: 690px) {
-  #mainSlider {
-    padding: 0px 20px;
+  #mainSlider .slides {
+    height: auto;
+  }
+  #mainSlider .slides > li > .slideContent {
+    padding: 30px 20px;
   }
 }
 .flexslider {
@@ -1765,7 +1765,7 @@ html[xmlns] .flexslider .slides {
   display: block;
 }
 .slideContent {
-  padding: 75px 0px;
+  padding: 75px 50px;
 }
 .slideContent .title {
   font-family: sans-serif;
