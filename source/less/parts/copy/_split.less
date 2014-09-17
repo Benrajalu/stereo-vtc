@@ -11,7 +11,7 @@
 	}
 
 	.title.ml{
-		.helveticaBold(#23262b, 33px);
+		.helveticaBold(@fontColor, 33px);
 		line-height:1.2;
 		letter-spacing:-1px;
 	}
@@ -112,12 +112,20 @@
 		}
 
 		&:before{
-			height:6px;
-			width:100%;
-			left:0px;
-			top:50%;
-			margin-top:-3px;
-			background:url('../img/dottedLineH.png') center center;
+			display:none;
+		}
+		.columns.left{
+			position:relative;
+			&:after{
+				position: absolute;
+				display:block;
+				content:' ';
+				height:6px;
+				width:100%;
+				left:0px;
+				bottom:-3px;
+				background:url('../img/dottedLineH.png') top left repeat-x;	
+			}
 		}
 	}
 	@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: @mobile) ,
@@ -190,7 +198,7 @@
 			margin-bottom:50px;
 		}
 		p{
-			.helvetica(#23262b, 16px);
+			.helvetica(@fontColor, 16px);
 			width:100%;
 			max-width:350px;
 			margin:0 auto 25px auto;
@@ -212,7 +220,7 @@
 			&.dots{
 				li{
 					list-style-type: none;
-					.helvetica(#23262b, 16px);
+					.helvetica(@fontColor, 16px);
 					text-align:left;
 					margin-bottom:3px;
 					padding-left:5px;

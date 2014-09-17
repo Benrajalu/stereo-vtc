@@ -162,7 +162,7 @@
 		}
 		&.noCaps{
 			text-transform: none;
-			color:#363636;
+			color:@fontColor;
 		}
 		&.noMarg{
 			margin-bottom:0px;
@@ -180,6 +180,7 @@
 
 	>p, >section>p{
 		.regularCopy();
+		color:@fontColor;
 	}
 
 	.list{
@@ -196,13 +197,13 @@
 			}
 		}
 		li{
-			.helvetica(#363636, 18px);
+			.helvetica(@fontColor, 18px);
 			line-height: 1.2;
 			a{
 				.helvetica(@blueText, 14px);
 				.transition(all 200ms ease-in-out);
 				&:hover{
-					color:@black;
+					color:@fontColor;
 				}
 			}
 		}

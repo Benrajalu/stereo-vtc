@@ -108,7 +108,7 @@
 }
 @media only screen and (max-width: 690px) {
   .rowFluid.splitScreen .columns {
-    padding: 15px;
+    padding: 15px 0px;
   }
   .rowFluid.splitScreen .row.left,
   .rowFluid.splitScreen .row.right {
@@ -1155,20 +1155,23 @@ html[xmlns] .flexslider .slides {
     padding: 0;
     top: 0;
     background-color: #ffffff;
-    right: 50%;
-    margin-right: -180px;
+    right: 0px;
   }
   .animation-chauffeur div.chauffeur {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
   .animation-chauffeur div.costar {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
   .animation-chauffeur div.voiture {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
   .animation-chauffeur div.billey {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
 }
 .animation-berline,
@@ -1424,7 +1427,7 @@ html[xmlns] .flexslider .slides {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
   #topNav #logo {
     background: url('../img/logocpSmallX2.png') center left no-repeat;
-    background-size: 150px 19px;
+    background-size: 175px 19px;
   }
 }
 #sliderNav {
@@ -1745,7 +1748,7 @@ html[xmlns] .flexslider .slides {
     height: auto;
   }
   #mainSlider .slides > li > .slideContent {
-    padding: 30px 20px;
+    padding: 50px 20px;
   }
 }
 .flexslider {
@@ -1903,7 +1906,7 @@ html[xmlns] .flexslider .slides {
 .slideContent .box .list li {
   font-family: sans-serif;
   font-weight: normal;
-  color: #000000;
+  color: #373a40;
   font-size: 16px;
   list-style-type: none;
   text-indent: -5px;
@@ -1912,7 +1915,7 @@ html[xmlns] .flexslider .slides {
 .slideContent .box .list li strong {
   font-family: sans-serif;
   font-weight: bold;
-  color: #000000;
+  color: #373a40;
   font-size: 16px;
 }
 .slideContent .box .list li:before {
@@ -2311,41 +2314,36 @@ html[xmlns] .flexslider .slides {
   border-radius: 9999px;
   /* TODO TEST IE & FALLBACKS */
 }
-.roundVideo .embed-container {
-  display: block;
-  width: 180px;
-  height: 180px;
-  position: relative;
-  top: 0px;
-  left: 0px;
+.roundVideo .rounded-vid {
+  -webkit-mask-image: url('../img/mask.svg');
+  /* Chrome, Safari */
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  -webkit-border-radius: 9999px;
-  -moz-border-radius: 9999px;
-  border-radius: 9999px;
-  background: #eaeae8;
-  z-index: 2;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  /* Firefox */
+}
+.roundVideo .embed-container {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  width: 180px;
+  height: 180px;
 }
 .roundVideo .embed-container iframe,
 .roundVideo .embed-container object,
 .roundVideo .embed-container embed {
-  -webkit-mask-image: url('../img/mask.svg');
-  /* Chrome, Safari */
-  background: #eaeae8;
-  height: 170px;
-  width: 170px;
   position: absolute;
-  top: 5px;
-  left: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  -webkit-border-radius: 9999px;
-  -moz-border-radius: 9999px;
-  border-radius: 9999px;
-  display: block;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 170px;
+  height: 170px;
 }
 .roundVideo .mute {
   display: block;
@@ -3142,7 +3140,7 @@ html[xmlns] .flexslider .slides {
 .splitScreen .title.ml {
   font-family: sans-serif;
   font-weight: bold;
-  color: #23262b;
+  color: #373a40;
   font-size: 33px;
   line-height: 1.2;
   letter-spacing: -1px;
@@ -3256,12 +3254,20 @@ html[xmlns] .flexslider .slides {
     margin: 20px auto;
   }
   .splitScreen:before {
+    display: none;
+  }
+  .splitScreen .columns.left {
+    position: relative;
+  }
+  .splitScreen .columns.left:after {
+    position: absolute;
+    display: block;
+    content: ' ';
     height: 6px;
     width: 100%;
     left: 0px;
-    top: 50%;
-    margin-top: -3px;
-    background: url('../img/dottedLineH.png') center center;
+    bottom: -3px;
+    background: url('../img/dottedLineH.png') top left repeat-x;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
@@ -3319,7 +3325,7 @@ html[xmlns] .flexslider .slides {
 .splitScreen.centered p {
   font-family: sans-serif;
   font-weight: normal;
-  color: #23262b;
+  color: #373a40;
   font-size: 16px;
   width: 100%;
   max-width: 350px;
@@ -3342,7 +3348,7 @@ html[xmlns] .flexslider .slides {
   list-style-type: none;
   font-family: sans-serif;
   font-weight: normal;
-  color: #23262b;
+  color: #373a40;
   font-size: 16px;
   text-align: left;
   margin-bottom: 3px;
@@ -3731,7 +3737,7 @@ html[xmlns] .flexslider .slides {
 }
 .article .title.noCaps {
   text-transform: none;
-  color: #363636;
+  color: #373a40;
 }
 .article .title.noMarg {
   margin-bottom: 0px;
@@ -3752,6 +3758,7 @@ html[xmlns] .flexslider .slides {
   font-size: 18px;
   line-height: 1.3;
   margin-bottom: 15px;
+  color: #373a40;
 }
 .article > p strong,
 .article > section > p strong {
@@ -3798,7 +3805,7 @@ html[xmlns] .flexslider .slides {
 .article .list li {
   font-family: sans-serif;
   font-weight: normal;
-  color: #363636;
+  color: #373a40;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -3818,7 +3825,7 @@ html[xmlns] .flexslider .slides {
   transition: all all 200ms ease-in-out ease;
 }
 .article .list li a:hover {
-  color: #000000;
+  color: #373a40;
 }
 .dropdown dt {
   margin-bottom: 30px;
