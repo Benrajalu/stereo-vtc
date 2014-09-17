@@ -1428,6 +1428,7 @@ html[xmlns] .flexslider .slides {
 }
 #sliderNav ul {
   height: 83px;
+  white-space: nowrap;
 }
 #sliderNav ul li {
   float: left;
