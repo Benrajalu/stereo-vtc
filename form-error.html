@@ -43,6 +43,10 @@
 	<h1 class="pageTitle xl indented">Inscription Chauffeur Eco 
 		<a class="titleLink" href="select.html">Changer de catégorie</a>
 	</h1>
+
+	<article class="article centered error">
+		<p>Les champs signalés ci-dessous sont obligatoires.</p>
+	</article>
 	
 	<article class="row padding">
 		<form id="mainForm" action="#" name="mainForm" class="form">
@@ -50,7 +54,7 @@
 				<h2 class="title ml underlined">1. Choix de la région</h2>
 
 				<div id="regionSwitch">
-					<a href="#" data-value="paris" class="switch paris">
+					<a href="#" data-value="paris" class="switch paris error">
 						<span class="text">Région <br/>Parisienne</span>
 						<span class="active"></span>
 					</a>
@@ -72,14 +76,14 @@
 				<h2 class="title ml underlined">2. Informations personnelles</h2>
 				<ul class="scope tight aligned">
 					<li>
-						<div class="mobileGroup"><label for="nom">Nom<abbr title="obligatoire">*</abbr></label>
-						<input type="text" id="nom" name="nom" /></div>
+						<div class="mobileGroup"><label for="nom" class="error">Nom<abbr title="obligatoire">*</abbr></label>
+						<input type="text" id="nom" name="nom" class="error" /></div>
 						<div class="mobileGroup"><label for="prenom">Prénom<abbr title="obligatoire">*</abbr></label>
 						<input type="text" id="prenom" name="prenom" /></div>
 					</li>
 					<li>
-						<label for="email">Email<abbr title="obligatoire">*</abbr></label>
-						<input type="email" id="email" name="email" />
+						<label for="email" class="error">Email<abbr title="obligatoire">*</abbr></label>
+						<input type="email" id="email" name="email" class="error"/>
 					</li>
 					<li>
 						<label for="phone">Téléphone<abbr title="obligatoire">*</abbr></label>
@@ -139,7 +143,7 @@
 				<h2 class="title ml underlined">4. Informations de facturation</h2>
 				<ul class="scope pad aligned large">
 					<li>
-						<label>Status<abbr>*</abbre></label>
+						<label class="error">Status<abbr>*</abbre></label>
 						<input type="radio" name="status" value="auto-entrepreneur" id="AE"/><label class="radioLabel" for="AE">Auto-entrepreneur</label><hr class="mobileBreak"/>
 						<input type="radio" name="status" value="société" id="soc"/><label class="radioLabel" for="soc">Société</label><hr class="mobileBreak"/>
 						<input type="radio" name="status" value="aucun" id="null"/><label class="radioLabel" for="null">Aucun</label><hr class="mobileBreak"/>
