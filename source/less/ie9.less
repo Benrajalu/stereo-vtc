@@ -1,0 +1,36 @@
+// Here be IE9 styles
+.form{
+	.scope{
+		&.checkboxes li{
+			input[type='checkbox']{
+				top:-2px;
+			}
+		}
+	}
+}
+
+
+.roundVideo{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width:160px;
+	height:160px;
+	.embed-container { 
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		height:160px;
+		width:160px;
+		iframe, object, embed { 
+			width:150px;
+			height:150px;
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			border-radius: 0px;
+		}
+	}
+	.mute{
+		left:-25px;
+	}
+} 

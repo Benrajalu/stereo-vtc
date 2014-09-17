@@ -37,11 +37,9 @@ $(window).load(function () {
 			manualControls: "#sliderNav li a",
 			start: function(){
 				muteAll();
-				muteSlider();
 			}, 
 			after: function(){
 				muteAll();
-				muteSlider();
 			}
 		});
 

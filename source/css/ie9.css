@@ -1,0 +1,29 @@
+.form .scope.checkboxes li input[type='checkbox'] {
+  top: -2px;
+}
+.roundVideo {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 160px;
+  height: 160px;
+}
+.roundVideo .embed-container {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  height: 160px;
+  width: 160px;
+}
+.roundVideo .embed-container iframe,
+.roundVideo .embed-container object,
+.roundVideo .embed-container embed {
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.roundVideo .mute {
+  left: -25px;
+}

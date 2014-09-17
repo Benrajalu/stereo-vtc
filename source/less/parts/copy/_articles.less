@@ -29,7 +29,7 @@
 		.box-shadow(1px 0px 3px rgba(0,0,0,0.06));
 		margin-bottom:55px;
 		position:relative;
-		&::after{
+		&:after{
 			content:" ";
 			display:block;
 			width:100%;
@@ -44,7 +44,7 @@
 			margin-bottom:140px;
 		}
 		@media only screen and (max-width:@tablet){
-			&::after{
+			&:after{
 				display:none;
 			}
 			.box-shadow(0px 3px 5px rgba(0,0,0,0.2));
@@ -104,7 +104,7 @@
 				.helveticaBold(#f01d19, 14px);
 				margin:0px;
 			}
-			&::after{
+			&:after{
 				content:"!";
 				.helveticaBold(#f01d19, 29px);
 				display:block;
@@ -188,7 +188,7 @@
 			li{
 				list-style-type: none;
 				padding-left:5px;
-				&::before{
+				&:before{
 					content:"-";
 					position:relative;
 					left:-5px;

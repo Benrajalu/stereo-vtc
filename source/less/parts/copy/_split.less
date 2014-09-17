@@ -22,7 +22,7 @@
 		position:relative;
 		margin-left:0px;
 		.transition(all 300ms ease-out);
-		&::before{
+		&:before{
 			content:"› ";
 			position:absolute;
 			left:-10px;
@@ -47,7 +47,7 @@
 				background:#3b4154;
 				color:@white;
 			}
-			&::before{
+			&:before{
 				display:none;
 			}
 		}
@@ -56,7 +56,7 @@
 	img{
 		max-width:100%;
 	}
-	&::before{
+	&:before{
 		content:'';
 		width:5px;
 		height:100%;
@@ -111,7 +111,7 @@
 			margin:20px auto;
 		}
 
-		&::before{
+		&:before{
 			height:6px;
 			width:100%;
 			left:0px;
@@ -126,7 +126,7 @@
 	only screen and (        min-device-pixel-ratio: 2) and (max-width: @mobile),
 	only screen and (                min-resolution: 192dpi) and (max-width: @mobile),
 	only screen and (                min-resolution: 2dppx) and (max-width: @mobile) { 
-		&::before{
+		&:before{
 			background:url('../img/dottedLineHX2.png') center left repeat-x;
 			background-size: 20px 5px;
 		}
@@ -275,7 +275,7 @@
 				}
 			}
 
-			&::before{
+			&:before{
 				display:none;
 			}
 
@@ -324,7 +324,7 @@
 		}
 	}
 	>ul{
-		&::before{
+		&:before{
 			content:' ';
 			display:block;
 			height:30px;
@@ -339,7 +339,7 @@
 			.transition(all 200ms ease-in-out);
 		}
 		&.eco{
-			&::before{
+			&:before{
 				margin-left:0px;
 			}
 		}
