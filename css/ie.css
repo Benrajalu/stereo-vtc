@@ -1,3 +1,28 @@
 .rowFluid.blueBG {
   filter: none;
+  background: #818ba2;
+}
+#sliderNav ul li a:before,
+#sliderNav ul li a:after {
+  display: none;
+}
+#sliderNav ul li a.flex-active:before {
+  top: -3px;
+  display: block;
+}
+#sliderNav ul li a.flex-active:after {
+  bottom: -13px;
+  display: block;
+}
+.form .scope.checkboxes li input[type='checkbox'] {
+  top: -2px;
+}
+#regionSwitch .switch span.active {
+  display: none !important;
+}
+#regionSwitch .switch.active span.active {
+  display: block !important;
+}
+#regionSwitch .switch.azur {
+  float: right;
 }

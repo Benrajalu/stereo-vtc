@@ -27,9 +27,9 @@ $(window).load(function () {
 		$(".flexslider").addClass("ready");
 		$("#mainSlider").flexslider({
 			itemMargin: 300,
-			slideshow:true,
+			slideshow:false,
 			animationLoop: false,
-			video: false,
+			video: true,
 			touch: true,
 			controlNav: true, 
 			smoothHeight:true,
@@ -38,11 +38,9 @@ $(window).load(function () {
 			manualControls: "#sliderNav li a",
 			start: function(){
 				muteAll();
-				muteSlider();
 			}, 
 			after: function(){
 				muteAll();
-				muteSlider();
 			}
 		});
 

@@ -44,11 +44,6 @@
     background-size: 258px 150px;
   }
 }
-@media only screen and (max-width: 690px) {
-  .rowFluid.textureBG {
-    background: #ffffff;
-  }
-}
 .rowFluid.greyBG {
   background: #f3f3f3;
 }
@@ -1138,8 +1133,7 @@ html[xmlns] .flexslider .slides {
 }
 @media only screen and (max-width: 690px) {
   .animation-chauffeur {
-    width: 100%;
-    max-width: 360px;
+    width: 360px;
     height: 200px;
     margin: 20px auto auto;
     position: relative;
@@ -1357,8 +1351,8 @@ html[xmlns] .flexslider .slides {
     outline: 0px;
     border: 0px;
   }
-  #topNav #threeLines #el::after,
-  #topNav #threeLines #el::before {
+  #topNav #threeLines #el:after,
+  #topNav #threeLines #el:before {
     display: block;
     content: "";
     position: absolute;
@@ -1377,10 +1371,10 @@ html[xmlns] .flexslider .slides {
     transition: all all 300ms ease ease;
     border-radius: 99px;
   }
-  #topNav #threeLines #el::after {
+  #topNav #threeLines #el:after {
     top: -10px;
   }
-  #topNav #threeLines #el::before {
+  #topNav #threeLines #el:before {
     bottom: -10px;
     left: auto;
     right: 0px;
@@ -1484,7 +1478,7 @@ html[xmlns] .flexslider .slides {
   -o-transition: all all 300ms ease-out ease;
   transition: all all 300ms ease-out ease;
 }
-#sliderNav ul li a::before {
+#sliderNav ul li a:before {
   content: "";
   display: block;
   height: 3px;
@@ -1505,7 +1499,7 @@ html[xmlns] .flexslider .slides {
   transition: all all 200ms ease-in-out ease;
   z-index: 99;
 }
-#sliderNav ul li a::after {
+#sliderNav ul li a:after {
   content: "";
   display: block;
   height: 13px;
@@ -1526,11 +1520,11 @@ html[xmlns] .flexslider .slides {
   transition: all all 200ms ease-in-out ease;
   z-index: 99;
 }
-#sliderNav ul li a.eco span::before,
-#sliderNav ul li a.team span::before,
-#sliderNav ul li a.freedom span::before,
-#sliderNav ul li a.transparent span::before,
-#sliderNav ul li a.pro span::before {
+#sliderNav ul li a.eco span:before,
+#sliderNav ul li a.team span:before,
+#sliderNav ul li a.freedom span:before,
+#sliderNav ul li a.transparent span:before,
+#sliderNav ul li a.pro span:before {
   content: " ";
   display: block;
   width: 33px;
@@ -1552,23 +1546,23 @@ html[xmlns] .flexslider .slides {
   -o-transition: all all 200ms ease-in-out ease;
   transition: all all 200ms ease-in-out ease;
 }
-#sliderNav ul li a:hover span::before,
-#sliderNav ul li a.flex-active span::before {
+#sliderNav ul li a:hover span:before,
+#sliderNav ul li a.flex-active span:before {
   background-image: url('parts/img/sliderSpriteActive.png');
 }
-#sliderNav ul li a.eco span::before {
+#sliderNav ul li a.eco span:before {
   background-position: 0px 0px;
 }
-#sliderNav ul li a.team span::before {
+#sliderNav ul li a.team span:before {
   background-position: -33px 0px;
 }
-#sliderNav ul li a.freedom span::before {
+#sliderNav ul li a.freedom span:before {
   background-position: -66px 0px;
 }
-#sliderNav ul li a.transparent span::before {
+#sliderNav ul li a.transparent span:before {
   background-position: -99px 0px;
 }
-#sliderNav ul li a.pro span::before {
+#sliderNav ul li a.pro span:before {
   background-position: -132px 0px;
 }
 #sliderNav ul li a:hover span {
@@ -1580,11 +1574,11 @@ html[xmlns] .flexslider .slides {
 #sliderNav ul li a.flex-active span {
   color: #000000;
 }
-#sliderNav ul li a.flex-active::before {
+#sliderNav ul li a.flex-active:before {
   top: -3px;
   opacity: 1;
 }
-#sliderNav ul li a.flex-active::after {
+#sliderNav ul li a.flex-active:after {
   bottom: -13px;
   opacity: 1;
 }
@@ -1613,21 +1607,24 @@ html[xmlns] .flexslider .slides {
   #sliderNav ul li:first-child {
     margin-left: 0px;
   }
-  #sliderNav ul li a::before {
+  #sliderNav ul li a:before {
     top: -3px;
   }
-  #sliderNav ul li a::after {
+  #sliderNav ul li a:after {
     display: none;
   }
-  #sliderNav ul li a.flex-active::before {
+  #sliderNav ul li a.flex-active:before {
     top: 0px;
   }
+}
+#mainSlider {
+  padding: 0px 50px;
 }
 #mainSlider .slides > li.madeInFrance {
   position: relative;
   overflow: hidden;
 }
-#mainSlider .slides > li.madeInFrance::before {
+#mainSlider .slides > li.madeInFrance:before {
   content: ' ';
   display: block;
   position: absolute;
@@ -1651,12 +1648,12 @@ html[xmlns] .flexslider .slides {
   -o-transition-delay: 800ms;
   transition-delay: 800ms;
 }
-#mainSlider .slides > li.madeInFrance.flex-active-slide::before {
+#mainSlider .slides > li.madeInFrance.flex-active-slide:before {
   top: 0px;
   opacity: 1;
 }
 @media only screen and (max-width: 960px) {
-  #mainSlider .slides > li.madeInFrance.flex-active-slide::before {
+  #mainSlider .slides > li.madeInFrance.flex-active-slide:before {
     top: -5px;
   }
 }
@@ -1732,15 +1729,12 @@ html[xmlns] .flexslider .slides {
     height: auto;
   }
   #mainSlider .slides > li > .slideContent {
-    padding: 50px 30px;
+    padding: 50px 0px;
   }
 }
 @media only screen and (max-width: 690px) {
-  #mainSlider .slides {
-    height: auto;
-  }
-  #mainSlider .slides > li > .slideContent {
-    padding: 30px 20px;
+  #mainSlider {
+    padding: 0px 20px;
   }
 }
 .flexslider {
@@ -1765,7 +1759,7 @@ html[xmlns] .flexslider .slides {
   display: block;
 }
 .slideContent {
-  padding: 75px 50px;
+  padding: 75px 0px;
 }
 .slideContent .title {
   font-family: sans-serif;
@@ -1900,7 +1894,7 @@ html[xmlns] .flexslider .slides {
   color: #000000;
   font-size: 16px;
 }
-.slideContent .box .list li::before {
+.slideContent .box .list li:before {
   content: "-";
   position: relative;
   left: -5px;
@@ -1945,7 +1939,7 @@ html[xmlns] .flexslider .slides {
   margin-bottom: 10px;
   position: relative;
 }
-.slideContent .checklist > li::before {
+.slideContent .checklist > li:before {
   content: " ";
   position: absolute;
   left: -8px;
@@ -2278,36 +2272,59 @@ html[xmlns] .flexslider .slides {
   }
 }
 .roundVideo {
+  display: block;
+  clear: both;
+  float: none;
   width: 180px;
   height: 180px;
-  border-radius: 100%;
-  border: 10px solid #eaeae8;
+  border: 7px solid #eaeae8;
   background: #eaeae8;
   overflow: visible;
   position: relative;
+  padding: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  border-radius: 9999px;
   /* TODO TEST IE & FALLBACKS */
 }
-.roundVideo .rounded-vid {
-  -webkit-mask-image: url(http://www.stereosuper.fr/valid/chauffeurprive/mask.svg);
-  /* Chrome, Safari */
-  border-radius: 100%;
-  /* Firefox */
-}
 .roundVideo .embed-container {
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  height: auto;
+  display: block;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  border-radius: 9999px;
+  background: #eaeae8;
+  z-index: 2;
 }
 .roundVideo .embed-container iframe,
 .roundVideo .embed-container object,
 .roundVideo .embed-container embed {
+  -webkit-mask-image: url('img/mask.svg');
+  /* Chrome, Safari */
+  background: #eaeae8;
+  height: 170px;
+  width: 170px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 5px;
+  left: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  border-radius: 9999px;
+  display: block;
+  z-index: 1;
 }
 .roundVideo .mute {
   display: block;
@@ -2797,7 +2814,7 @@ html[xmlns] .flexslider .slides {
 .form #regionSwitch .switch:hover span {
   color: #000000;
 }
-.form #regionSwitch .switch::after {
+.form #regionSwitch .switch:after {
   content: " ";
   display: block;
   width: 43px;
@@ -2889,7 +2906,7 @@ html[xmlns] .flexslider .slides {
   background-color: #f7f7f2;
   border-color: #757e92;
 }
-.form #regionSwitch .switch.active::after {
+.form #regionSwitch .switch.active:after {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -2955,7 +2972,7 @@ html[xmlns] .flexslider .slides {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-#tooltip::after {
+#tooltip:after {
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -3128,7 +3145,7 @@ html[xmlns] .flexslider .slides {
   -o-transition: all all 300ms ease-out ease;
   transition: all all 300ms ease-out ease;
 }
-.splitScreen a::before {
+.splitScreen a:before {
   content: "› ";
   position: absolute;
   left: -10px;
@@ -3161,13 +3178,13 @@ html[xmlns] .flexslider .slides {
   background: #3b4154;
   color: #ffffff;
 }
-.splitScreen a.button::before {
+.splitScreen a.button:before {
   display: none;
 }
 .splitScreen img {
   max-width: 100%;
 }
-.splitScreen::before {
+.splitScreen:before {
   content: '';
   width: 5px;
   height: 100%;
@@ -3180,7 +3197,7 @@ html[xmlns] .flexslider .slides {
   z-index: 9999;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .splitScreen::before {
+  .splitScreen:before {
     background: url('parts/img/dottedLineX2.png') center center;
     background-size: 5px 20px;
   }
@@ -3217,7 +3234,7 @@ html[xmlns] .flexslider .slides {
     max-width: 300px;
     margin: 20px auto;
   }
-  .splitScreen::before {
+  .splitScreen:before {
     height: 6px;
     width: 100%;
     left: 0px;
@@ -3227,7 +3244,7 @@ html[xmlns] .flexslider .slides {
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
-  .splitScreen::before {
+  .splitScreen:before {
     background: url('parts/img/dottedLineHX2.png') center left repeat-x;
     background-size: 20px 5px;
   }
@@ -3368,7 +3385,7 @@ html[xmlns] .flexslider .slides {
   .splitScreen.centered .list.smaller {
     margin-top: 0px;
   }
-  .splitScreen.centered::before {
+  .splitScreen.centered:before {
     display: none;
   }
   .splitScreen.centered.eco .row.left {
@@ -3424,7 +3441,7 @@ html[xmlns] .flexslider .slides {
   padding-left: 35px;
   background: url('parts/img/pillR.png') center left no-repeat;
 }
-#halfSwitch > ul::before {
+#halfSwitch > ul:before {
   content: ' ';
   display: block;
   height: 30px;
@@ -3451,7 +3468,7 @@ html[xmlns] .flexslider .slides {
   -o-transition: all all 200ms ease-in-out ease;
   transition: all all 200ms ease-in-out ease;
 }
-#halfSwitch > ul.eco::before {
+#halfSwitch > ul.eco:before {
   margin-left: 0px;
 }
 @media only screen and (max-width: 690px) {
@@ -3505,7 +3522,7 @@ html[xmlns] .flexslider .slides {
   margin-bottom: 55px;
   position: relative;
 }
-.article.material::after {
+.article.material:after {
   content: " ";
   display: block;
   width: 100%;
@@ -3529,7 +3546,7 @@ html[xmlns] .flexslider .slides {
     -o-box-shadow: '' 0px 3px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
     box-shadow: '' 0px 3px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
   }
-  .article.material::after {
+  .article.material:after {
     display: none;
   }
 }
@@ -3608,7 +3625,7 @@ html[xmlns] .flexslider .slides {
   font-size: 14px;
   margin: 0px;
 }
-.article.centered.error::after {
+.article.centered.error:after {
   content: "!";
   font-family: sans-serif;
   font-weight: bold;
@@ -3752,7 +3769,7 @@ html[xmlns] .flexslider .slides {
   list-style-type: none;
   padding-left: 5px;
 }
-.article .list.dash li::before {
+.article .list.dash li:before {
   content: "-";
   position: relative;
   left: -5px;
@@ -3794,7 +3811,7 @@ html[xmlns] .flexslider .slides {
   padding-left: 15px;
   position: relative;
 }
-.dropdown dt a::before {
+.dropdown dt a:before {
   display: block;
   content: "";
   width: 7px;
@@ -3805,12 +3822,12 @@ html[xmlns] .flexslider .slides {
   top: 5px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .dropdown dt a::before {
+  .dropdown dt a:before {
     background: url('parts/img/droppingx2.png') center center;
     background-size: 7px 13px;
   }
 }
-.dropdown dt a.active::before {
+.dropdown dt a.active:before {
   width: 12px;
   height: 7px;
   left: -3px;
@@ -3818,7 +3835,7 @@ html[xmlns] .flexslider .slides {
   background: url('parts/img/dropped.png') center center no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .dropdown dt a.active::before {
+  .dropdown dt a.active:before {
     background: url('parts/img/droppedx2.png') center center;
     background-size: 13px 7px;
   }
