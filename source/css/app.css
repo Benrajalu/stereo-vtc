@@ -1,7 +1,3 @@
-html,
-body {
-  padding-bottom: 40px;
-}
 .row {
   width: 100%;
   max-width: 960px;
@@ -82,7 +78,7 @@ body {
   -ms-transition: all all 300ms ease-in-out ease;
   -o-transition: all all 300ms ease-in-out ease;
   transition: all all 300ms ease-in-out ease;
-  padding: 33px 15px 90px 15px;
+  padding: 33px 15px 130px 15px;
 }
 .rowFluid.splitScreen .columns:hover {
   background: #f3f3f3;
@@ -1540,41 +1536,34 @@ html[xmlns] .flexslider .slides {
   background-image: url('../img/sliderSprite.png');
   background-repeat: no-repeat;
   overflow: hidden;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
+}
+#sliderNav ul li a:hover span::before,
+#sliderNav ul li a.flex-active span::before {
+  background-image: url('../img/sliderSpriteActive.png');
 }
 #sliderNav ul li a.eco span::before {
   background-position: 0px 0px;
 }
-#sliderNav ul li a.eco:hover span::before,
-#sliderNav ul li a.eco.flex-active span::before {
-  background-position: 0px -33px;
-}
 #sliderNav ul li a.team span::before {
   background-position: -33px 0px;
-}
-#sliderNav ul li a.team:hover span::before,
-#sliderNav ul li a.team.flex-active span::before {
-  background-position: -33px -33px;
 }
 #sliderNav ul li a.freedom span::before {
   background-position: -66px 0px;
 }
-#sliderNav ul li a.freedom:hover span::before,
-#sliderNav ul li a.freedom.flex-active span::before {
-  background-position: -66px -33px;
-}
 #sliderNav ul li a.transparent span::before {
   background-position: -99px 0px;
 }
-#sliderNav ul li a.transparent:hover span::before,
-#sliderNav ul li a.transparent.flex-active span::before {
-  background-position: -99px -33px;
-}
 #sliderNav ul li a.pro span::before {
   background-position: -132px 0px;
-}
-#sliderNav ul li a.pro:hover span::before,
-#sliderNav ul li a.pro.flex-active span::before {
-  background-position: -132px -34px;
 }
 #sliderNav ul li a:hover span {
   color: #000000;
@@ -2384,6 +2373,7 @@ html[xmlns] .flexslider .slides {
 }
 .form {
   margin-bottom: 80px;
+  padding-bottom: 40px;
 }
 .form *[type="hidden"] {
   display: none;
@@ -2422,6 +2412,9 @@ html[xmlns] .flexslider .slides {
 .form .scope li.top label,
 .form .scope li.top textarea {
   vertical-align: top;
+}
+.form .scope li.top label {
+  padding-top: 5px;
 }
 .form .scope li .legend {
   font-family: sans-serif;
@@ -2708,6 +2701,7 @@ html[xmlns] .flexslider .slides {
   font-weight: normal;
   color: #ffffff;
   font-size: 22px;
+  line-height: 1.3;
   -webkit-box-shadow: 0px 0px 0px transparent;
   -moz-box-shadow: 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px transparent;
@@ -2816,7 +2810,7 @@ html[xmlns] .flexslider .slides {
   -o-transition: all all 300ms ease-in-out ease;
   transition: all all 300ms ease-in-out ease;
 }
-.form #regionSwitch .switch span {
+.form #regionSwitch .switch span.text {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -2837,12 +2831,43 @@ html[xmlns] .flexslider .slides {
   -ms-transition: all all 300ms ease-in-out ease;
   -o-transition: all all 300ms ease-in-out ease;
   transition: all all 300ms ease-in-out ease;
+  position: relative;
+  z-index: 4;
+}
+.form #regionSwitch .switch span.active {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-position: top left;
+  background-repeat: no-repeat;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
 }
 .form #regionSwitch .switch.paris {
   background-image: url("../img/form/parisOFF.png");
 }
+.form #regionSwitch .switch.paris span.active {
+  background-image: url("../img/form/parisON.png");
+}
 .form #regionSwitch .switch.azur {
   background-image: url("../img/form/azurOFF.png");
+}
+.form #regionSwitch .switch.azur span.active {
+  background-image: url("../img/form/azurON.png");
 }
 .form #regionSwitch .switch.active {
   background-color: #f7f7f2;
@@ -2853,20 +2878,22 @@ html[xmlns] .flexslider .slides {
   -moz-opacity: 1;
   opacity: 1;
 }
-.form #regionSwitch .switch.active span {
+.form #regionSwitch .switch.active span.text {
   color: #000000;
 }
-.form #regionSwitch .switch.active.paris {
-  background-image: url("../img/form/parisON.png");
-}
-.form #regionSwitch .switch.active.azur {
-  background-image: url("../img/form/azurON.png");
+.form #regionSwitch .switch.active span.active {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
 }
 @media only screen and (max-width: 960px) {
   .form #regionSwitch .switch {
     padding-right: 20px;
   }
   .form #regionSwitch .switch.paris {
+    background-position: -70px 0px;
+  }
+  .form #regionSwitch .switch.paris span.active {
     background-position: -70px 0px;
   }
 }
@@ -2887,6 +2914,10 @@ html[xmlns] .flexslider .slides {
   .form #regionSwitch .switch.paris.active,
   .form #regionSwitch .switch.azur.active {
     background: #f7f7f2;
+  }
+  .form #regionSwitch .switch.paris.active span.active,
+  .form #regionSwitch .switch.azur.active span.active {
+    display: none;
   }
 }
 #tooltip {
@@ -3102,6 +3133,7 @@ html[xmlns] .flexslider .slides {
   text-transform: uppercase;
   border: 0px;
   background: #737c90;
+  line-height: 1.3;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -3245,7 +3277,7 @@ html[xmlns] .flexslider .slides {
 }
 .splitScreen.centered a.button {
   position: absolute;
-  bottom: 70px;
+  bottom: 120px;
   left: 50%;
   width: 300px;
 }
@@ -3468,6 +3500,9 @@ html[xmlns] .flexslider .slides {
   bottom: -20px;
   left: 0px;
 }
+.article.material.mar40 {
+  margin-bottom: 140px;
+}
 @media only screen and (max-width: 960px) {
   .article.material {
     -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
@@ -3504,9 +3539,10 @@ html[xmlns] .flexslider .slides {
   font-family: sans-serif;
   font-weight: normal;
   font-size: 16px;
+  line-height: 1.3;
   text-decoration: none;
   width: 400px;
-  margin: 25px auto 60px auto;
+  margin: 25px auto 140px auto;
   text-align: center;
   padding: 30px 40px;
   color: #ffffff;
