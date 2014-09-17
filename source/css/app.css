@@ -1210,15 +1210,15 @@ html[xmlns] .flexslider .slides {
   background: url('../img/logocp.png') center center no-repeat;
   overflow: hidden;
   text-indent: -9999px;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #topNav #logo {
@@ -1488,15 +1488,15 @@ html[xmlns] .flexslider .slides {
   top: 0px;
   left: 0px;
   opacity: 0;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
   z-index: 99;
 }
 #sliderNav ul li a::after {
@@ -1509,15 +1509,15 @@ html[xmlns] .flexslider .slides {
   bottom: -3px;
   left: 0px;
   opacity: 0;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
   z-index: 99;
 }
 #sliderNav ul li a.eco span::before,
@@ -1634,15 +1634,15 @@ html[xmlns] .flexslider .slides {
   height: 54px;
   top: -100px;
   opacity: 0.1;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
   -webkit-transition-delay: 800ms;
   -moz-transition-delay: 800ms;
   -o-transition-delay: 800ms;
@@ -1738,15 +1738,15 @@ html[xmlns] .flexslider .slides {
   }
 }
 .flexslider {
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
   min-height: 300px;
 }
 .flexslider .slides {
@@ -1959,15 +1959,15 @@ html[xmlns] .flexslider .slides {
 .slideContent #bubbles img.bubble {
   width: auto;
   border: 10px solid #f3f3f1;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -2597,6 +2597,9 @@ html[xmlns] .flexslider .slides {
   font-size: 18px;
   margin: 0px 10px;
 }
+.form label.error {
+  color: #f01d19;
+}
 .form input[type='text'],
 .form input[type='email'] {
   height: 34px;
@@ -2621,15 +2624,15 @@ html[xmlns] .flexslider .slides {
   font-weight: normal;
   color: #000000;
   font-size: 14px;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .form input[type='text']:active,
 .form input[type='email']:active,
@@ -2637,6 +2640,10 @@ html[xmlns] .flexslider .slides {
 .form input[type='email']:focus {
   outline: 0px;
   border-color: #757e92;
+}
+.form input[type='text'].error,
+.form input[type='email'].error {
+  border-color: #f01d19;
 }
 .form textarea {
   height: 70px;
@@ -2661,15 +2668,15 @@ html[xmlns] .flexslider .slides {
   font-weight: normal;
   color: #000000;
   font-size: 14px;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
   resize: none;
 }
 .form textarea:active,
@@ -2712,15 +2719,15 @@ html[xmlns] .flexslider .slides {
   text-transform: uppercase;
   margin-bottom: 100px;
   cursor: pointer;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .form input[type='submit']:hover {
   background: #3b4154;
@@ -2762,15 +2769,18 @@ html[xmlns] .flexslider .slides {
   background-repeat: no-repeat;
   border: 4px solid #e4e4e4;
   position: relative;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
+}
+.form #regionSwitch .switch.error span.text {
+  color: #f01d19;
 }
 .form #regionSwitch .switch:last-child {
   float: right;
@@ -2800,15 +2810,15 @@ html[xmlns] .flexslider .slides {
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .form #regionSwitch .switch span.text {
   display: inline-block;
@@ -2822,15 +2832,15 @@ html[xmlns] .flexslider .slides {
   color: #919295;
   font-size: 20px;
   text-decoration: none;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
   position: relative;
   z-index: 4;
 }
@@ -3010,15 +3020,15 @@ html[xmlns] .flexslider .slides {
   color: #757d91;
   font-size: 14px;
   text-transform: lowercase;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .titleLink:hover {
   color: #ae2d2b;
@@ -3460,15 +3470,15 @@ html[xmlns] .flexslider .slides {
 .regularCopy a {
   text-decoration: underline;
   color: #818ba2;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .regularCopy a:hover {
   color: #000000;
@@ -3571,6 +3581,59 @@ html[xmlns] .flexslider .slides {
     line-height: 1.4;
   }
 }
+.article.centered.error {
+  border: 2px solid #f01d19;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 30px;
+  width: 70%;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+.article.centered.error p {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #f01d19;
+  font-size: 14px;
+  margin: 0px;
+}
+.article.centered.error::after {
+  content: "!";
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #f01d19;
+  font-size: 29px;
+  display: block;
+  width: 43px;
+  height: 43px;
+  text-align: center;
+  line-height: 38px;
+  background: #ffffff;
+  border: 4px solid #f01d19;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
+}
 .article.intro {
   padding: 0px 60px;
   font-size: 16px;
@@ -3658,15 +3721,15 @@ html[xmlns] .flexslider .slides {
 .article > section > p a {
   text-decoration: underline;
   color: #818ba2;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .article > p a:hover,
 .article > section > p a:hover {
@@ -3700,15 +3763,15 @@ html[xmlns] .flexslider .slides {
   font-weight: normal;
   color: #79839a;
   font-size: 14px;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .article .list li a:hover {
   color: #000000;
@@ -3775,15 +3838,15 @@ html[xmlns] .flexslider .slides {
 .dropdown dd p a {
   text-decoration: underline;
   color: #818ba2;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all all 300ms ease-in-out ease;
-  -moz-transition: all all 300ms ease-in-out ease;
-  -ms-transition: all all 300ms ease-in-out ease;
-  -o-transition: all all 300ms ease-in-out ease;
-  transition: all all 300ms ease-in-out ease;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all all 200ms ease-in-out ease;
+  -moz-transition: all all 200ms ease-in-out ease;
+  -ms-transition: all all 200ms ease-in-out ease;
+  -o-transition: all all 200ms ease-in-out ease;
+  transition: all all 200ms ease-in-out ease;
 }
 .dropdown dd p a:hover {
   color: #000000;

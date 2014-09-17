@@ -209,6 +209,9 @@
 			.helvetica(#363636, 18px);
 			margin:0px 10px;
 		}
+		&.error{
+			color:#f01d19;
+		}
 	}
 
 	input[type='text'], input[type='email']{
@@ -220,10 +223,13 @@
 		border:2px solid #e4e4e4;
 		padding:0px 5px;
 		.helvetica(@black, 14px);
-		.transition(all 300ms ease-in-out);
+		.transition(all 200ms ease-in-out);
 		&:active, &:focus{
 			outline:0px;
 			border-color:#757e92;
+		}
+		&.error{
+			border-color:#f01d19;
 		}
 	}
 	textarea{
@@ -235,7 +241,7 @@
 		border:2px solid #e4e4e4;
 		padding:5px 5px;
 		.helvetica(@black, 14px);
-		.transition(all 300ms ease-in-out);
+		.transition(all 200ms ease-in-out);
 		resize:none;
 		&:active, &:focus{
 			outline:0px;
@@ -262,7 +268,7 @@
 		text-transform: uppercase;
 		margin-bottom:100px;
 		cursor:pointer;
-		.transition(all 300ms ease-in-out);
+		.transition(all 200ms ease-in-out);
 		&:hover{
 			background:#3b4154;
 		}
@@ -287,7 +293,12 @@
 			background-repeat:no-repeat;
 			border:4px solid #e4e4e4;
 			position:relative;
-			.transition(all 300ms ease-in-out);
+			.transition(all 200ms ease-in-out);
+			&.error{
+				span.text{
+					color:#f01d19;
+				}
+			}
 			&:last-child{
 				float:right;
 			}
@@ -309,7 +320,7 @@
 				top:-10px;
 				right:-10px;
 				.opacity(0);
-				.transition(all 300ms ease-in-out);
+				.transition(all 200ms ease-in-out);
 			}
 			span.text{
 				.inline-block();
@@ -318,7 +329,7 @@
 				text-align:left;
 				.helveticaBold(#919295, 20px);
 				text-decoration: none;
-				.transition(all 300ms ease-in-out);
+				.transition(all 200ms ease-in-out);
 				position: relative;
 				z-index:4;
 			}
