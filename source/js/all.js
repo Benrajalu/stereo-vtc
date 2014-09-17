@@ -27,6 +27,7 @@ $(window).load(function () {
 		$("#mainSlider").flexslider({
 			itemMargin: 300,
 			slideshow:true,
+			animationLoop: false,
 			video: true,
 			touch: true,
 			controlNav: true, 

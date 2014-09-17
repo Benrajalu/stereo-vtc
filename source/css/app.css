@@ -1758,7 +1758,6 @@ html[xmlns] .flexslider .slides {
   -ms-transition: all all 300ms ease-in-out ease;
   -o-transition: all all 300ms ease-in-out ease;
   transition: all all 300ms ease-in-out ease;
-  background: url("../img/loading.gif") center center no-repeat;
   min-height: 300px;
 }
 .flexslider .slides {
@@ -3032,6 +3031,7 @@ html[xmlns] .flexslider .slides {
   }
   .hero h1 {
     font-size: 40px;
+    line-height: 1;
   }
 }
 @media only screen and (max-width: 690px) {
@@ -3040,6 +3040,7 @@ html[xmlns] .flexslider .slides {
   }
   .hero h1 {
     font-size: 40px;
+    line-height: 1;
   }
   .hero h1 br {
     display: none;
