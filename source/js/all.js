@@ -28,7 +28,7 @@ $(window).load(function () {
 			itemMargin: 300,
 			slideshow:true,
 			animationLoop: false,
-			video: true,
+			video: false,
 			touch: true,
 			controlNav: true, 
 			smoothHeight:true,
