@@ -108,7 +108,7 @@
 }
 @media only screen and (max-width: 690px) {
   .rowFluid.splitScreen .columns {
-    padding: 15px;
+    padding: 15px 0px;
   }
   .rowFluid.splitScreen .row.left,
   .rowFluid.splitScreen .row.right {
@@ -2314,41 +2314,36 @@ html[xmlns] .flexslider .slides {
   border-radius: 9999px;
   /* TODO TEST IE & FALLBACKS */
 }
-.roundVideo .embed-container {
-  display: block;
-  width: 180px;
-  height: 180px;
-  position: relative;
-  top: 0px;
-  left: 0px;
+.roundVideo .rounded-vid {
+  -webkit-mask-image: url('img/mask.svg');
+  /* Chrome, Safari */
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  -webkit-border-radius: 9999px;
-  -moz-border-radius: 9999px;
-  border-radius: 9999px;
-  background: #eaeae8;
-  z-index: 2;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  /* Firefox */
+}
+.roundVideo .embed-container {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  width: 180px;
+  height: 180px;
 }
 .roundVideo .embed-container iframe,
 .roundVideo .embed-container object,
 .roundVideo .embed-container embed {
-  -webkit-mask-image: url('img/mask.svg');
-  /* Chrome, Safari */
-  background: #eaeae8;
-  height: 170px;
-  width: 170px;
   position: absolute;
-  top: 5px;
-  left: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  -webkit-border-radius: 9999px;
-  -moz-border-radius: 9999px;
-  border-radius: 9999px;
-  display: block;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 170px;
+  height: 170px;
 }
 .roundVideo .mute {
   display: block;
@@ -3259,12 +3254,20 @@ html[xmlns] .flexslider .slides {
     margin: 20px auto;
   }
   .splitScreen:before {
+    display: none;
+  }
+  .splitScreen .columns.left {
+    position: relative;
+  }
+  .splitScreen .columns.left:after {
+    position: absolute;
+    display: block;
+    content: ' ';
     height: 6px;
     width: 100%;
     left: 0px;
-    top: 50%;
-    margin-top: -3px;
-    background: url('parts/img/dottedLineH.png') center center;
+    bottom: -3px;
+    background: url('parts/img/dottedLineH.png') top left repeat-x;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
