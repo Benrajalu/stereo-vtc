@@ -1155,20 +1155,23 @@ html[xmlns] .flexslider .slides {
     padding: 0;
     top: 0;
     background-color: #ffffff;
-    right: 50%;
-    margin-right: -180px;
+    right: 0px;
   }
   .animation-chauffeur div.chauffeur {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
   .animation-chauffeur div.costar {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
   .animation-chauffeur div.voiture {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
   .animation-chauffeur div.billey {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
 }
 .animation-berline,
@@ -1424,7 +1427,7 @@ html[xmlns] .flexslider .slides {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
   #topNav #logo {
     background: url('../img/logocpSmallX2.png') center left no-repeat;
-    background-size: 150px 19px;
+    background-size: 175px 19px;
   }
 }
 #sliderNav {
@@ -1903,7 +1906,7 @@ html[xmlns] .flexslider .slides {
 .slideContent .box .list li {
   font-family: sans-serif;
   font-weight: normal;
-  color: #000000;
+  color: #373a40;
   font-size: 16px;
   list-style-type: none;
   text-indent: -5px;
@@ -1912,7 +1915,7 @@ html[xmlns] .flexslider .slides {
 .slideContent .box .list li strong {
   font-family: sans-serif;
   font-weight: bold;
-  color: #000000;
+  color: #373a40;
   font-size: 16px;
 }
 .slideContent .box .list li:before {
@@ -3142,7 +3145,7 @@ html[xmlns] .flexslider .slides {
 .splitScreen .title.ml {
   font-family: sans-serif;
   font-weight: bold;
-  color: #23262b;
+  color: #373a40;
   font-size: 33px;
   line-height: 1.2;
   letter-spacing: -1px;
@@ -3319,7 +3322,7 @@ html[xmlns] .flexslider .slides {
 .splitScreen.centered p {
   font-family: sans-serif;
   font-weight: normal;
-  color: #23262b;
+  color: #373a40;
   font-size: 16px;
   width: 100%;
   max-width: 350px;
@@ -3342,7 +3345,7 @@ html[xmlns] .flexslider .slides {
   list-style-type: none;
   font-family: sans-serif;
   font-weight: normal;
-  color: #23262b;
+  color: #373a40;
   font-size: 16px;
   text-align: left;
   margin-bottom: 3px;
@@ -3731,7 +3734,7 @@ html[xmlns] .flexslider .slides {
 }
 .article .title.noCaps {
   text-transform: none;
-  color: #363636;
+  color: #373a40;
 }
 .article .title.noMarg {
   margin-bottom: 0px;
@@ -3752,6 +3755,7 @@ html[xmlns] .flexslider .slides {
   font-size: 18px;
   line-height: 1.3;
   margin-bottom: 15px;
+  color: #373a40;
 }
 .article > p strong,
 .article > section > p strong {
@@ -3798,7 +3802,7 @@ html[xmlns] .flexslider .slides {
 .article .list li {
   font-family: sans-serif;
   font-weight: normal;
-  color: #363636;
+  color: #373a40;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -3818,7 +3822,7 @@ html[xmlns] .flexslider .slides {
   transition: all all 200ms ease-in-out ease;
 }
 .article .list li a:hover {
-  color: #000000;
+  color: #373a40;
 }
 .dropdown dt {
   margin-bottom: 30px;
