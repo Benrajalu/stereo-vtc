@@ -1,6 +1,5 @@
 // Let's style the index's slider
 	#mainSlider{
-		padding:0px 50px;
 		.slides{
 			>li{
 				// Specific slides
@@ -107,14 +106,21 @@
 				height:auto;
 				>li{
 					>.slideContent{
-						padding:50px 0px;
+						padding:50px 30px;
 					}
 				}
 			}
 		}
 
 		@media only screen and (max-width: @mobile){
-			padding:0px 20px;
+			.slides{
+				height:auto;
+				>li{
+					>.slideContent{
+						padding:30px 20px;
+					}
+				}
+			}
 		}
 
 	}
