@@ -15,6 +15,11 @@
 .row:after {
   clear: both;
 }
+@media only screen and (max-width: 960px) {
+  .row.padding {
+    padding: 0 20px;
+  }
+}
 .rowFluid {
   width: 100%;
   *zoom: 1;
@@ -35,7 +40,7 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .rowFluid.textureBG {
-    background: url('../img/bgX2.jpg') ncenter center;
+    background: url('../img/bgX2.jpg') center center;
     background-size: 258px 150px;
   }
 }
@@ -1084,6 +1089,111 @@ html[xmlns] .flexslider .slides {
 .ps-container.ie.hover .ps-scrollbar-y {
   visibility: visible;
 }
+.animation-chauffeur {
+  width: 639px;
+  height: 200px;
+  margin: 20px auto auto;
+}
+.animation-chauffeur div {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+}
+.animation-chauffeur div.chauffeur {
+  width: 12%;
+}
+.animation-chauffeur div.costar {
+  width: 18%;
+}
+.animation-chauffeur div.voiture {
+  width: 39%;
+}
+.animation-chauffeur div.billey {
+  width: 29%;
+}
+.animation-chauffeur div.chauffeur.active-elmnt {
+  background-image: url('../img/anim-perso-1.gif');
+}
+.animation-chauffeur div.costar.active-elmnt {
+  background-image: url('../img/anim-perso-2.gif');
+}
+.animation-chauffeur div.voiture.active-elmnt {
+  background-image: url('../img/anim-perso-3.gif');
+}
+.animation-chauffeur div.billey.active-elmnt {
+  background-image: url('../img/anim-perso-4.gif');
+}
+.animation-chauffeur div.billey.active-elmntb {
+  background-image: url('../img/anim-perso-4b.gif');
+}
+@media only screen and (max-width: 690px) {
+  .animation-chauffeur {
+    width: 360px;
+    height: 200px;
+    margin: 20px auto auto;
+    position: relative;
+  }
+  .animation-chauffeur div {
+    position: absolute;
+    display: inline;
+    width: 50px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: #ffffff;
+    right: 50%;
+    margin-right: -180px;
+  }
+  .animation-chauffeur div.chauffeur {
+    width: 360px;
+  }
+  .animation-chauffeur div.costar {
+    width: 360px;
+  }
+  .animation-chauffeur div.voiture {
+    width: 360px;
+  }
+  .animation-chauffeur div.billey {
+    width: 360px;
+  }
+}
+.animation-berline,
+.animation-eco {
+  width: 100%;
+  max-width: 340px;
+  height: 210px;
+  margin: 20px auto 40px auto;
+  position: relative;
+  display: block;
+}
+.animation-berline .voiture {
+  position: absolute;
+  margin-top: 92px;
+  margin-left: 70px;
+}
+.animation-eco .voiture {
+  position: absolute;
+  margin-top: 102px;
+  margin-left: 70px;
+}
+.animation-berline .pin,
+.animation-eco .pin {
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 12px;
+  top: 0;
+}
+.animation-eco .pin {
+  margin-left: 160px;
+}
 #topNav {
   background: #000000;
   height: 81px;
@@ -1097,7 +1207,7 @@ html[xmlns] .flexslider .slides {
   vertical-align: middle;
   width: 259px;
   height: 81px;
-  background: url('../img/logocp.jpg') center center no-repeat;
+  background: url('../img/logocp.png') center center no-repeat;
   overflow: hidden;
   text-indent: -9999px;
   -webkit-transition: all 300ms ease-in-out;
@@ -1109,6 +1219,12 @@ html[xmlns] .flexslider .slides {
   -ms-transition: all all 300ms ease-in-out ease;
   -o-transition: all all 300ms ease-in-out ease;
   transition: all all 300ms ease-in-out ease;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #topNav #logo {
+    background: url('../img/logocpX2.png') center center no-repeat;
+    background-size: 259px 29px;
+  }
 }
 #topNav #threeLines {
   display: none;
@@ -1159,7 +1275,7 @@ html[xmlns] .flexslider .slides {
     display: block;
     position: absolute;
     left: 10px;
-    background: url('../img/logocpSmall.jpg') center left no-repeat;
+    background: url('../img/logocpSmall.png') center left no-repeat;
   }
   #topNav #menuContents {
     right: auto;
@@ -1301,7 +1417,7 @@ html[xmlns] .flexslider .slides {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
   #topNav #logo {
-    background: url('../img/logocp.jpg') center left no-repeat;
+    background: url('../img/logocpSmallX2.png') center left no-repeat;
     background-size: 150px 19px;
   }
 }
@@ -1493,6 +1609,10 @@ html[xmlns] .flexslider .slides {
     margin: 0px;
     height: 60px;
     line-height: 60px;
+    margin-left: -0.25em;
+  }
+  #sliderNav ul li:first-child {
+    margin-left: 0px;
   }
   #sliderNav ul li a::before {
     top: -3px;
@@ -1596,7 +1716,7 @@ html[xmlns] .flexslider .slides {
   background-position: 0px 0px;
 }
 #mainSlider .flex-direction-nav .flex-prev:hover {
-  left: 3px;
+  left: -8px;
 }
 #mainSlider .flex-direction-nav .flex-next {
   right: 2px;
@@ -1604,7 +1724,7 @@ html[xmlns] .flexslider .slides {
   background-position: -24px 0px;
 }
 #mainSlider .flex-direction-nav .flex-next:hover {
-  right: 3px;
+  right: -8px;
 }
 @media only screen and (max-width: 690px) {
   #mainSlider .flex-direction-nav {
@@ -1744,7 +1864,24 @@ html[xmlns] .flexslider .slides {
   height: 19px;
   overflow: hidden;
   text-indent: -9999px;
-  background: url("../img/logoSmall.jpg") center center no-repeat;
+  background: url("../img/logoSmall.png") center center no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .slideContent .box h2 strong {
+    background: url("../img/logoSmallX2.png") center center no-repeat;
+    background-size: 194px 22px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .slideContent .box h2 strong {
+    background: url("../img/logoSmallXS.png") center center no-repeat;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
+  .slideContent .box h2 strong .box .left strong {
+    background: url('../img/logoSmallXSx2.png') center center no-repeat;
+    background-size: 140px 16px;
+  }
 }
 .slideContent .box .list {
   padding: 30px 25px 0px 25px;
@@ -1944,6 +2081,10 @@ html[xmlns] .flexslider .slides {
   .slideContent #bubbles img.bubble#face3 {
     position: static;
     margin: 0px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 173px;
   }
   .slideContent #bubbles img.bubble#face1.smaller,
   .slideContent #bubbles img.bubble#face4.smaller,
@@ -1952,6 +2093,35 @@ html[xmlns] .flexslider .slides {
     float: left;
     width: 45%;
     margin: 0px 2.5%;
+    max-width: 139px;
+    position: relative;
+    left: 0px;
+    right: 0px;
+  }
+  .slideContent #bubbles img.bubble#face1.smaller#face3,
+  .slideContent #bubbles img.bubble#face4.smaller#face3,
+  .slideContent #bubbles img.bubble#face2.smaller#face3,
+  .slideContent #bubbles img.bubble#face3.smaller#face3 {
+    float: right;
+    bottom: -10px;
+  }
+  .slideContent #bubbles img.bubble#face1.smaller#face2,
+  .slideContent #bubbles img.bubble#face4.smaller#face2,
+  .slideContent #bubbles img.bubble#face2.smaller#face2,
+  .slideContent #bubbles img.bubble#face3.smaller#face2 {
+    top: -10px;
+  }
+  .slideContent #bubbles img.bubble#face1,
+  .slideContent #bubbles img.bubble#face4 {
+    clear: both;
+    float: none;
+    position: relative;
+  }
+  .slideContent #bubbles img.bubble#face1 {
+    top: 10px;
+  }
+  .slideContent #bubbles img.bubble#face2 {
+    bottom: 10px;
   }
 }
 .slideContent.solo {
@@ -2049,7 +2219,7 @@ html[xmlns] .flexslider .slides {
     line-height: 125px;
   }
   .slideContent.solo .box .left h2 strong {
-    background: url('../img/logoSmallXS.jpg') center center no-repeat;
+    background: url('../img/logoSmallXS.png') center center no-repeat;
   }
   .slideContent.solo .box .right {
     padding-left: 155px;
@@ -2058,6 +2228,12 @@ html[xmlns] .flexslider .slides {
     top: -150px;
     right: 50%;
     margin-right: -90px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 960px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 960px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 960px), only screen and (min-device-pixel-ratio: 2) and (max-width: 960px), only screen and (min-resolution: 192dpi) and (max-width: 960px), only screen and (min-resolution: 2dppx) and (max-width: 960px) {
+  .slideContent.solo .box .left strong {
+    background: url('../img/logoSmallXSx2.png') center center no-repeat;
+    background-size: 140px 16px;
   }
 }
 @media only screen and (max-width: 690px) {
@@ -2513,7 +2689,7 @@ html[xmlns] .flexslider .slides {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   -webkit-appearance: none;
   border: 0px;
@@ -2524,24 +2700,7 @@ html[xmlns] .flexslider .slides {
   -moz-border-radius: 10px;
   border-radius: 10px;
   min-width: 300px;
-  background: #818ba2;
-  /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgxOGJhMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3MjdhOGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #818ba2 0%, #727a8f 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #818ba2), color-stop(100%, #727a8f));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #818ba2 0%, #727a8f 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #818ba2 0%, #727a8f 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #818ba2 0%, #727a8f 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #818ba2 0%, #727a8f 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#818ba2', endColorstr='#727a8f', GradientType=0);
-  /* IE6-8 */
+  background: #737c90;
   font-family: sans-serif;
   font-weight: normal;
   color: #ffffff;
@@ -2567,14 +2726,7 @@ html[xmlns] .flexslider .slides {
   transition: all all 300ms ease-in-out ease;
 }
 .form input[type='submit']:hover {
-  opacity: 0.9;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: '' 2px 2px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
+  background: #3b4154;
 }
 @media only screen and (max-width: 690px) {
   .form input[type='submit'] {
@@ -2913,7 +3065,7 @@ html[xmlns] .flexslider .slides {
   text-decoration: none;
   border-bottom: 1px solid #79839a;
   position: relative;
-  margin-left: 13px;
+  margin-left: 0px;
   -webkit-transition: all 300ms ease-out;
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
@@ -2940,7 +3092,7 @@ html[xmlns] .flexslider .slides {
   zoom: 1;
   margin-top: 25px;
   text-align: center;
-  padding: 30px 40px;
+  padding: 20px 40px;
   color: #ffffff;
   text-transform: uppercase;
   border: 0px;
@@ -2973,6 +3125,12 @@ html[xmlns] .flexslider .slides {
   background: url('../img/dottedLine.png') center center;
   display: block;
   z-index: 9999;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .splitScreen::before {
+    background: url('../img/dottedLineX2.png') center center;
+    background-size: 5px 20px;
+  }
 }
 @media only screen and (max-width: 960px) {
   .splitScreen .title.ml {
@@ -3012,7 +3170,13 @@ html[xmlns] .flexslider .slides {
     left: 0px;
     top: 50%;
     margin-top: -3px;
-    background-position: top left;
+    background: url('../img/dottedLineH.png') center center;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 690px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 690px), only screen and (min-device-pixel-ratio: 2) and (max-width: 690px), only screen and (min-resolution: 192dpi) and (max-width: 690px), only screen and (min-resolution: 2dppx) and (max-width: 690px) {
+  .splitScreen::before {
+    background: url('../img/dottedLineHX2.png') center left repeat-x;
+    background-size: 20px 5px;
   }
 }
 .splitScreen.centered {
@@ -3298,6 +3462,20 @@ html[xmlns] .flexslider .slides {
   background: url("../img/dropShadow.png") center center no-repeat;
   bottom: -20px;
   left: 0px;
+}
+@media only screen and (max-width: 960px) {
+  .article.material {
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: '' 0px 3px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: '' 0px 3px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: '' 0px 3px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: '' 0px 3px 5px rgba(0, 0, 0, 0.2) 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .article.material::after {
+    display: none;
+  }
 }
 @media only screen and (max-width: 690px) {
   .article.material {

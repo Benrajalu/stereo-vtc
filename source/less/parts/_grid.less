@@ -9,6 +9,11 @@
 		position:relative;
 		.clearfix();
 		margin:0 auto;
+		&.padding{
+			@media only screen and (max-width:@tablet){
+				padding:0 20px;
+			}
+		}
 	}
 
 	.rowFluid{
@@ -24,7 +29,7 @@
 			only screen and (        min-device-pixel-ratio: 2),
 			only screen and (                min-resolution: 192dpi),
 			only screen and (                min-resolution: 2dppx) { 
-				background:url('../img/bgX2.jpg') ncenter center;
+				background:url('../img/bgX2.jpg') center center;
 				background-size: 258px 150px;
 			}
 		}

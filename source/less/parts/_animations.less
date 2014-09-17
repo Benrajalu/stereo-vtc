@@ -1,0 +1,128 @@
+// Index animations
+
+.animation-chauffeur{
+	width:  639px;
+	height: 200px;
+	margin: 20px auto auto;
+}
+.animation-chauffeur div{
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0;
+	padding: 0;
+}
+
+.animation-chauffeur div.chauffeur{
+	width: 12%;
+}
+
+.animation-chauffeur  div.costar{
+	width: 18%;
+	
+}
+.animation-chauffeur div.voiture{
+	width: 39%;
+	
+}
+.animation-chauffeur div.billey{
+	width: 29%;
+	
+}
+
+.animation-chauffeur div.chauffeur.active-elmnt{
+	background-image: url('../img/anim-perso-1.gif');
+}
+
+.animation-chauffeur  div.costar.active-elmnt{
+	background-image: url('../img/anim-perso-2.gif');
+	
+}
+.animation-chauffeur div.voiture.active-elmnt{
+	background-image: url('../img/anim-perso-3.gif');
+	
+}
+.animation-chauffeur div.billey.active-elmnt{
+	background-image: url('../img/anim-perso-4.gif');
+	
+}
+.animation-chauffeur div.billey.active-elmntb{
+	background-image: url('../img/anim-perso-4b.gif');
+	
+}
+
+
+@media only screen and (max-width:@mobile){
+	.animation-chauffeur {
+		width:  360px;
+		height: 200px;
+		margin: 20px auto auto;
+		position:relative;
+	}
+
+	.animation-chauffeur div{
+		position: absolute;
+		display: inline;
+		width: 50px;
+		height: 200px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0;
+		padding: 0;
+		top: 0;
+		background-color: #ffffff;
+		right:50%;
+		margin-right:-180px;
+	}
+
+	.animation-chauffeur div.chauffeur{
+		width: 360px;
+	}
+
+	.animation-chauffeur  div.costar{
+		width: 360px;
+
+	}
+	.animation-chauffeur div.voiture{
+		width: 360px;
+
+	}
+	.animation-chauffeur div.billey{
+		width: 360px;
+
+	}
+}
+
+// Select animations
+.animation-berline,.animation-eco{
+	width:  100%;
+	max-width:340px;
+	height: 210px;
+	margin: 20px auto 40px auto;
+	position: relative;
+	display: block;
+}
+
+.animation-berline .voiture{
+	position:absolute;
+	margin-top: 92px;
+	margin-left: 70px;
+}
+.animation-eco .voiture{
+	position:absolute;
+	margin-top: 102px;
+	margin-left: 70px;
+}
+.animation-berline .pin, .animation-eco .pin{
+	position:absolute;
+	margin-left: 120px;
+	margin-top: 12px;
+	top: 0;
+}
+.animation-eco .pin{
+	margin-left: 160px;
+}
+
